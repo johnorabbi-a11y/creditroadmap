@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generate Your Credit Roadmap | Credit Roadmap UK</title>
+  <meta name="description" content="Answer a short UK credit profile questionnaire and generate a realistic credit rebuild roadmap.">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">CR</span>
+      <span>Credit Roadmap UK</span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="roadmap.html" aria-current="page">Generate Roadmap</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Roadmap generator</p>
+      <h1>Generate your credit rebuild roadmap.</h1>
+      <p>Answer the questions below to receive general guidance on likely blockers, quick wins and next steps. This does not guarantee approval. Lenders use their own criteria.</p>
+    </section>
+
+    <section class="tool-layout">
+      <form id="roadmap-form" class="form-card">
+        <fieldset>
+          <legend>Court judgments and defaults</legend>
+          <label for="ccjStatus">CCJ status</label>
+          <select id="ccjStatus" name="ccjStatus" required>
+            <option value="none">No CCJ</option>
+            <option value="paid">Paid CCJ</option>
+            <option value="unpaid">Unpaid CCJ</option>
+          </select>
+
+          <label for="ccjAge">CCJ age</label>
+          <select id="ccjAge" name="ccjAge" required>
+            <option value="none">No CCJ</option>
+            <option value="under1">Less than 1 year</option>
+            <option value="1to3">1-3 years</option>
+            <option value="3to6">3-6 years</option>
+            <option value="over6">Over 6 years</option>
+          </select>
+
+          <label for="defaults">Defaults</label>
+          <select id="defaults" name="defaults" required>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2plus">2+</option>
+            <option value="unsure">Unsure</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Recent conduct</legend>
+          <label for="missedPayments">Missed payments in the last 12 months</label>
+          <select id="missedPayments" name="missedPayments" required>
+            <option value="none">None</option>
+            <option value="1to2">1-2</option>
+            <option value="3to6">3-6</option>
+            <option value="6plus">6+</option>
+          </select>
+
+          <label for="applications">Recent applications</label>
+          <select id="applications" name="applications" required>
+            <option value="none">None in last 3 months</option>
+            <option value="1to2">1-2 in last 3 months</option>
+            <option value="3plus">3+ in last 3 months</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Stability and balances</legend>
+          <label for="electoralRoll">Electoral roll</label>
+          <select id="electoralRoll" name="electoralRoll" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="unsure">Unsure</option>
+          </select>
+
+          <label for="utilisation">Credit utilisation</label>
+          <select id="utilisation" name="utilisation" required>
+            <option value="under25">Under 25%</option>
+            <option value="25to50">25-50%</option>
+            <option value="50to75">50-75%</option>
+            <option value="75plus">75%+</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your main goal</legend>
+          <label for="goal">Main goal</label>
+          <select id="goal" name="goal" required>
+            <option value="phone">Phone contract</option>
+            <option value="card">Credit card</option>
+            <option value="loan">Personal loan</option>
+            <option value="car">Car finance</option>
+            <option value="mortgage">Mortgage</option>
+          </select>
+        </fieldset>
+
+        <div class="form-actions">
+          <button class="button primary" type="submit">Generate roadmap</button>
+          <button class="button secondary" type="reset">Reset</button>
+        </div>
+        <p class="microcopy">Your answers are processed in this browser. This is general guidance only.</p>
+      </form>
+
+      <aside class="results-card" id="results" aria-live="polite">
+        <div class="empty-state">
+          <h2>Your roadmap will appear here</h2>
+          <p>Complete the questionnaire to see your current profile, blockers, quick wins and staged plan.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section disclaimer-box">
+      <h2>Before using your roadmap</h2>
+      <p>This is general guidance. It is not financial advice, debt advice or credit broking. It does not guarantee approval. Consider speaking to a qualified adviser for debt or financial advice, especially if repayments are becoming difficult.</p>
+      <a href="index.html">Back to home</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Credit Roadmap UK. General guidance only.</p>
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+  </footer>
+</body>
+</html>
