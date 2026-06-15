@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Credit Roadmap Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Credit Roadmap Generator</h1>
+
+<form id="roadmapForm">
+
+<h3>CCJ Status</h3>
+
+<select id="ccj">
+<option>No CCJ</option>
+<option>Paid CCJ</option>
+<option>Unpaid CCJ</option>
+</select>
+
+<h3>Defaults</h3>
+
+<select id="defaults">
+<option>0</option>
+<option>1</option>
+<option>2+</option>
+</select>
+
+<h3>Electoral Roll</h3>
+
+<select id="electoral">
+<option>Yes</option>
+<option>No</option>
+</select>
+
+<h3>Credit Utilisation</h3>
+
+<select id="utilisation">
+<option>Under 25%</option>
+<option>25-50%</option>
+<option>50-75%</option>
+<option>75%+</option>
+</select>
+
+<h3>Goal</h3>
+
+<select id="goal">
+<option>Phone Contract</option>
+<option>Credit Card</option>
+<option>Personal Loan</option>
+<option>Car Finance</option>
+<option>Mortgage</option>
+</select>
+
+<br><br>
+
+<button type="button" onclick="generateRoadmap()">
+Generate Roadmap
+</button>
+
+</form>
+
+<div id="results"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
