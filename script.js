@@ -425,7 +425,7 @@
 
         <section class="result-disclaimer">
           <h3>Important disclaimer</h3>
-          <p>This is general UK credit education only. It is not financial advice, debt advice, credit broking or a recommendation to apply for any product. It does not guarantee approval or improvement. Lenders, brokers and credit providers use their own criteria.</p>
+          <p>This is general UK credit education only. It is not financial advice, debt advice, credit broking or a recommendation to apply for any product. It does not promise acceptance or improvement. Lenders, brokers and credit providers use their own criteria.</p>
         </section>
       </div>
     `;

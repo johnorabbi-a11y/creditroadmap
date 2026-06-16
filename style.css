@@ -653,7 +653,14 @@ a:focus {
 .site-footer nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  justify-content: flex-end;
+  gap: 10px 14px;
+  max-width: 860px;
+}
+
+.site-footer a {
+  white-space: nowrap;
+  font-size: 0.94rem;
 }
 
 @media (max-width: 860px) {
