@@ -427,11 +427,23 @@ select {
   font: inherit;
 }
 
+input {
+  width: 100%;
+  min-height: 50px;
+  padding: 11px 12px;
+  border: 1px solid #b9c5d4;
+  border-radius: 8px;
+  color: var(--ink);
+  background: white;
+  font: inherit;
+}
+
 select:hover {
   border-color: #8190a5;
 }
 
 select:focus,
+input:focus,
 button:focus,
 a:focus {
   outline: 3px solid rgba(29, 78, 216, 0.28);
@@ -538,6 +550,90 @@ a:focus {
 .result-disclaimer p {
   margin: 0;
   color: #68410b;
+}
+
+.tracker-layout {
+  width: min(1120px, calc(100% - 36px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(300px, 0.85fr) minmax(0, 1.25fr);
+  gap: 24px;
+  align-items: start;
+  padding: 0 0 56px;
+}
+
+.tracker-dashboard {
+  display: grid;
+  gap: 18px;
+}
+
+.tracker-summary-grid,
+.tracker-detail-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.tracker-summary-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tracker-detail-grid {
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 16px;
+}
+
+.summary-card {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfdff;
+}
+
+.summary-card h2 {
+  margin: 10px 0 6px;
+  font-size: 1.45rem;
+}
+
+.timeline-card {
+  margin-top: 0;
+}
+
+.compact-heading {
+  margin-bottom: 16px;
+}
+
+.timeline-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 1.1fr) auto;
+  gap: 18px;
+  align-items: start;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+
+.timeline-entry:first-child {
+  border-top: 0;
+}
+
+.timeline-entry h3 {
+  margin: 10px 0 4px;
+}
+
+.timeline-entry dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+}
+
+.timeline-entry dt {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.timeline-entry dd {
+  margin: 0;
 }
 
 .reading-grid {
@@ -705,6 +801,16 @@ a:focus {
 
   .score-summary {
     align-self: stretch;
+  }
+
+  .tracker-layout,
+  .tracker-summary-grid,
+  .tracker-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-entry {
+    grid-template-columns: 1fr;
   }
 
   .article-panel {

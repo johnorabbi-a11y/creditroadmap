@@ -1,4 +1,5 @@
 (function () {
+  const storageKey = "creditRoadmapSnapshots";
   const form = document.querySelector("#roadmap-form");
   const results = document.querySelector("#results");
 
@@ -77,7 +78,7 @@
   ];
 
   function addUnique(list, item) {
-    if (!list.includes(item)) {
+    if (!list.some((entry) => JSON.stringify(entry) === JSON.stringify(item))) {
       list.push(item);
     }
   }
@@ -341,6 +342,7 @@
     return {
       score,
       band,
+      answers: data,
       summary,
       blockers,
       quickWins,
@@ -351,6 +353,30 @@
       goalGuidance,
       recommendedReading
     };
+  }
+
+  function getLabel(selectName, value) {
+    const field = form.elements[selectName];
+    if (!field) {
+      return value;
+    }
+
+    const option = Array.from(field.options).find((item) => item.value === value);
+    return option ? option.textContent : value;
+  }
+
+  function readSnapshots() {
+    try {
+      return JSON.parse(localStorage.getItem(storageKey)) || [];
+    } catch (error) {
+      return [];
+    }
+  }
+
+  function saveSnapshot(snapshot) {
+    const snapshots = readSnapshots();
+    snapshots.push(snapshot);
+    localStorage.setItem(storageKey, JSON.stringify(snapshots));
   }
 
   function readingMarkup(items) {
@@ -416,6 +442,13 @@
           ${readingMarkup(roadmap.recommendedReading)}
         </section>
 
+        <section class="result-section tracker-save-panel">
+          <h3>Track this result</h3>
+          <p>Save this roadmap result in your browser so you can compare it with future snapshots. Nothing is sent to a lender, broker or credit reference agency.</p>
+          <button class="button primary" type="button" id="save-roadmap-result">Save This Result</button>
+          <p class="microcopy" id="save-roadmap-status" aria-live="polite"></p>
+        </section>
+
         ${roadmap.notes.length ? `
           <section class="result-section">
             <h3>Additional notes</h3>
@@ -429,6 +462,41 @@
         </section>
       </div>
     `;
+
+    const saveButton = document.querySelector("#save-roadmap-result");
+    const saveStatus = document.querySelector("#save-roadmap-status");
+    if (saveButton) {
+      saveButton.addEventListener("click", () => {
+        const answers = roadmap.answers;
+        saveSnapshot({
+          id: `${Date.now()}-${Math.random().toString(16).slice(2)}`,
+          source: "roadmap",
+          date: new Date().toISOString().slice(0, 10),
+          savedAt: new Date().toISOString(),
+          riskScore: roadmap.score,
+          riskBand: roadmap.band.label,
+          ccjStatus: answers.ccjStatus,
+          ccjStatusLabel: getLabel("ccjStatus", answers.ccjStatus),
+          defaults: answers.defaults,
+          defaultsLabel: getLabel("defaults", answers.defaults),
+          missedPayments: answers.missedPayments,
+          missedPaymentsLabel: getLabel("missedPayments", answers.missedPayments),
+          electoralRoll: answers.electoralRoll,
+          electoralRollLabel: getLabel("electoralRoll", answers.electoralRoll),
+          utilisation: answers.utilisation,
+          utilisationLabel: getLabel("utilisation", answers.utilisation),
+          applications: answers.applications,
+          applicationsLabel: getLabel("applications", answers.applications),
+          goal: answers.goal,
+          goalLabel: getLabel("goal", answers.goal)
+        });
+        saveButton.disabled = true;
+        saveButton.textContent = "Result saved";
+        if (saveStatus) {
+          saveStatus.innerHTML = 'Saved locally. View it in the <a href="progress-tracker.html">Progress Tracker</a>.';
+        }
+      });
+    }
   }
 
   form.addEventListener("submit", (event) => {
