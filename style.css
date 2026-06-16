@@ -331,6 +331,10 @@ a:hover {
   gap: 18px;
 }
 
+.steps.five {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .step {
   padding: 22px 0;
 }
@@ -536,6 +540,36 @@ a:focus {
   color: #68410b;
 }
 
+.reading-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.reading-card {
+  display: block;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  color: var(--ink);
+}
+
+.reading-card:hover {
+  text-decoration: none;
+  border-color: #9db5d9;
+}
+
+.reading-card strong,
+.reading-card span {
+  display: block;
+}
+
+.reading-card span {
+  margin-top: 5px;
+  color: var(--muted);
+}
+
 .content-page {
   padding-bottom: 54px;
 }
@@ -549,6 +583,45 @@ a:focus {
 .warning-panel {
   border-color: #f1c27d;
   background: #fff8ed;
+}
+
+.article-page {
+  max-width: none;
+}
+
+.article-panel {
+  width: min(880px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.article-panel section + section {
+  margin-top: 34px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.article-panel h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.45rem, 2vw, 2rem);
+}
+
+.article-panel h3 {
+  margin: 18px 0 6px;
+}
+
+.article-panel p {
+  color: var(--muted);
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
 }
 
 .cta-strip {
@@ -606,8 +679,11 @@ a:focus {
   }
 
   .cards.three,
+  .guide-grid,
   .benefit-list,
-  .steps {
+  .steps,
+  .steps.five,
+  .reading-grid {
     grid-template-columns: 1fr;
   }
 
@@ -622,6 +698,11 @@ a:focus {
 
   .score-summary {
     align-self: stretch;
+  }
+
+  .article-panel {
+    width: min(100% - 28px, 880px);
+    padding: 22px;
   }
 }
 

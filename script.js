@@ -153,6 +153,52 @@
     }
   }
 
+  function buildRecommendedReading(data) {
+    const reading = [];
+
+    if (data.ccjStatus !== "none" || data.ccjAge !== "none") {
+      addUnique(reading, {
+        href: "ccj-guide.html",
+        title: "CCJ guide",
+        text: "Understand how CCJs can affect applications and what to check first."
+      });
+    }
+
+    if (data.defaults !== "0") {
+      addUnique(reading, {
+        href: "defaults-guide.html",
+        title: "Defaults guide",
+        text: "Learn how defaults are recorded and how to plan around them."
+      });
+    }
+
+    if (data.utilisation === "50to75" || data.utilisation === "75plus") {
+      addUnique(reading, {
+        href: "credit-utilisation-guide.html",
+        title: "Credit utilisation guide",
+        text: "See practical ways to reduce high balance pressure over time."
+      });
+    }
+
+    if (data.electoralRoll === "no" || data.electoralRoll === "unsure") {
+      addUnique(reading, {
+        href: "electoral-roll-guide.html",
+        title: "Electoral roll guide",
+        text: "Check how address stability and electoral roll records may help."
+      });
+    }
+
+    if (data.goal === "mortgage") {
+      addUnique(reading, {
+        href: "mortgage-readiness-guide.html",
+        title: "Mortgage readiness guide",
+        text: "Prepare for how mortgage lenders may view adverse credit and affordability."
+      });
+    }
+
+    return reading;
+  }
+
   function buildRoadmap(data) {
     const score = calculateScore(data);
     const band = getBand(score);
@@ -173,6 +219,7 @@
     ];
     const notes = [];
     const goalGuidance = [];
+    const recommendedReading = buildRecommendedReading(data);
     let summary = band.summary;
 
     if (data.ccjStatus === "unpaid") {
@@ -301,8 +348,22 @@
       ninetyDay,
       twelveMonth,
       notes,
-      goalGuidance
+      goalGuidance,
+      recommendedReading
     };
+  }
+
+  function readingMarkup(items) {
+    if (!items.length) {
+      return "<p class=\"positive-note\">No specific guide was triggered by these answers. You may still find the methodology and full disclaimer useful before applying.</p>";
+    }
+
+    return `<div class="reading-grid">${items.map((item) => `
+      <a class="reading-card" href="${item.href}">
+        <strong>${item.title}</strong>
+        <span>${item.text}</span>
+      </a>
+    `).join("")}</div>`;
   }
 
   function renderRoadmap(roadmap) {
@@ -348,6 +409,11 @@
         <section class="result-section">
           <h3>Goal-specific guidance</h3>
           ${listMarkup(roadmap.goalGuidance, "Keep affordability, recent conduct and report accuracy in mind before applying.")}
+        </section>
+
+        <section class="result-section">
+          <h3>Recommended Next Steps</h3>
+          ${readingMarkup(roadmap.recommendedReading)}
         </section>
 
         ${roadmap.notes.length ? `
