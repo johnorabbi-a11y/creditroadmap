@@ -163,6 +163,16 @@
         title: "CCJ guide",
         text: "Understand how CCJs can affect applications and what to check first."
       });
+      addUnique(reading, {
+        href: "how-long-does-a-ccj-stay-on-your-credit-file.html",
+        title: "How long a CCJ stays on your credit file",
+        text: "Check the usual UK CCJ timeline and what satisfaction status can mean."
+      });
+      addUnique(reading, {
+        href: "can-i-get-a-loan-with-a-ccj.html",
+        title: "Can I get a loan with a CCJ?",
+        text: "Read cautious guidance on loans, CCJs and affordability before applying."
+      });
     }
 
     if (data.defaults !== "0") {
@@ -194,6 +204,29 @@
         href: "mortgage-readiness-guide.html",
         title: "Mortgage readiness guide",
         text: "Prepare for how mortgage lenders may view adverse credit and affordability."
+      });
+      if (data.ccjStatus !== "none" || data.ccjAge !== "none") {
+        addUnique(reading, {
+          href: "can-i-get-a-mortgage-with-a-ccj.html",
+          title: "Can I get a mortgage with a CCJ?",
+          text: "Understand how a CCJ may affect mortgage preparation."
+        });
+      }
+    }
+
+    if (data.goal === "car") {
+      addUnique(reading, {
+        href: "can-i-get-car-finance-with-bad-credit.html",
+        title: "Can I get car finance with bad credit?",
+        text: "Review common car finance readiness factors before applying."
+      });
+    }
+
+    if (data.goal === "phone") {
+      addUnique(reading, {
+        href: "can-i-get-a-phone-contract-with-bad-credit.html",
+        title: "Can I get a phone contract with bad credit?",
+        text: "See how phone contract checks may treat recent credit issues."
       });
     }
 
