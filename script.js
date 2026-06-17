@@ -144,11 +144,11 @@
 
     if (data.goal === "car") {
       addUnique(goalGuidance, "Car finance: lenders may consider deposit size, affordability, defaults, CCJs and recent missed payments.");
-      addUnique(goalGuidance, "A larger deposit and a period of cleaner recent conduct could improve how the application is viewed, but it will not guarantee acceptance.");
+      addUnique(goalGuidance, "A larger deposit and a period of cleaner recent conduct could improve how the application is viewed, but it does not promise acceptance.");
     }
 
     if (data.goal === "mortgage") {
-      addUnique(goalGuidance, "Mortgage: lenders may look closely at deposit size, affordability, CCJs, defaults, missed payments and the age of adverse markers.");
+      addUnique(goalGuidance, 'Mortgage: lenders may look closely at deposit size, affordability, <a href="https://aftertaxtool.com/take-home-pay-uk.html">take-home pay</a>, CCJs, defaults, missed payments and the age of adverse markers.');
       addUnique(goalGuidance, "Recent or unpaid adverse markers may significantly narrow options, so qualified mortgage advice could be useful before applying.");
       addUnique(twelveMonth, "For a mortgage goal, focus on deposit building, clean recent payment history, reducing unsecured balances and letting adverse markers age where possible.");
     }

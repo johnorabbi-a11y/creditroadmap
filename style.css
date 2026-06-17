@@ -732,6 +732,37 @@ a:focus {
   color: white;
 }
 
+.resource-cta,
+.resource-panel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.resource-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 26px;
+  margin-bottom: 48px;
+}
+
+.resource-cta h2 {
+  margin: 0 0 8px;
+}
+
+.resource-cta p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.resource-panel {
+  padding: 32px;
+  margin-bottom: 48px;
+}
+
 .cta-strip h2 {
   color: white;
 }
@@ -791,6 +822,11 @@ a:focus {
   }
 
   .cta-strip {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .resource-cta {
     align-items: flex-start;
     flex-direction: column;
   }
