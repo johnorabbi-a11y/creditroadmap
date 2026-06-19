@@ -205,11 +205,49 @@
         title: "Mortgage readiness guide",
         text: "Prepare for how mortgage lenders may view adverse credit and affordability."
       });
+      addUnique(reading, {
+        href: "improve-credit-before-mortgage.html",
+        title: "Improve credit before a mortgage",
+        text: "Prioritise report checks, balances and recent conduct before applying."
+      });
+      addUnique(reading, {
+        href: "how-far-back-do-mortgage-lenders-look-at-credit-history.html",
+        title: "How far back mortgage lenders look",
+        text: "Understand credit history timelines and recent conduct checks."
+      });
       if (data.ccjStatus !== "none" || data.ccjAge !== "none") {
         addUnique(reading, {
           href: "can-i-get-a-mortgage-with-a-ccj.html",
           title: "Can I get a mortgage with a CCJ?",
           text: "Understand how a CCJ may affect mortgage preparation."
+        });
+      }
+      if (data.ccjStatus === "paid") {
+        addUnique(reading, {
+          href: "mortgage-with-satisfied-ccj.html",
+          title: "Mortgage with a satisfied CCJ",
+          text: "Review how CCJ satisfaction status, timing and evidence may matter."
+        });
+      }
+      if (data.defaults === "1" || data.defaults === "2plus" || data.defaults === "unsure") {
+        addUnique(reading, {
+          href: "mortgage-with-defaults.html",
+          title: "Mortgage with defaults",
+          text: "Check how defaults may affect mortgage preparation."
+        });
+      }
+      if (data.missedPayments === "1to2" || data.missedPayments === "3to6" || data.missedPayments === "6plus") {
+        addUnique(reading, {
+          href: "mortgage-with-missed-payments.html",
+          title: "Mortgage with missed payments",
+          text: "Review why recent payment conduct may matter."
+        });
+      }
+      if (data.utilisation === "50to75" || data.utilisation === "75plus") {
+        addUnique(reading, {
+          href: "does-credit-utilisation-affect-mortgage-application.html",
+          title: "Credit utilisation and mortgage applications",
+          text: "Understand how high balances may affect affordability and readiness."
         });
       }
     }
