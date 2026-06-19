@@ -47,6 +47,18 @@
       none: 0,
       "1to2": 8,
       "3plus": 18
+    },
+    bankruptcyStatus: {
+      none: 0,
+      discharged: 22,
+      recent: 35,
+      unsure: 10
+    },
+    creditScoreView: {
+      stable: 0,
+      fair: 8,
+      poor: 18,
+      unsure: 8
     }
   };
 
@@ -110,14 +122,17 @@
       + scoreAnswer("missedPayments", data.missedPayments)
       + scoreAnswer("electoralRoll", data.electoralRoll)
       + scoreAnswer("utilisation", data.utilisation)
-      + scoreAnswer("applications", data.applications);
+      + scoreAnswer("applications", data.applications)
+      + scoreAnswer("bankruptcyStatus", data.bankruptcyStatus || "none")
+      + scoreAnswer("creditScoreView", data.creditScoreView || "stable");
 
     const hasVeryHighTrigger = data.ccjStatus === "unpaid"
       || data.defaults === "2plus"
       || data.missedPayments === "3to6"
       || data.missedPayments === "6plus"
       || data.utilisation === "75plus"
-      || data.applications === "3plus";
+      || data.applications === "3plus"
+      || data.bankruptcyStatus === "recent";
 
     if (!hasVeryHighTrigger) {
       return Math.min(65, clampScore(rawScore));
@@ -265,6 +280,53 @@
         href: "can-i-get-a-phone-contract-with-bad-credit.html",
         title: "Can I get a phone contract with bad credit?",
         text: "See how phone contract checks may treat recent credit issues."
+      });
+      if (data.ccjStatus !== "none" || data.ccjAge !== "none") {
+        addUnique(reading, {
+          href: "phone-contract-with-ccj.html",
+          title: "Phone contract with a CCJ",
+          text: "Understand how CCJ age and status may affect mobile applications."
+        });
+      }
+      if (data.ccjStatus === "unpaid") {
+        addUnique(reading, {
+          href: "can-i-get-a-phone-contract-with-an-unpaid-ccj.html",
+          title: "Phone contract with an unpaid CCJ",
+          text: "Review why unresolved judgments may be treated seriously."
+        });
+      }
+      if (data.ccjStatus === "paid") {
+        addUnique(reading, {
+          href: "can-i-get-a-phone-contract-with-satisfied-ccj.html",
+          title: "Phone contract with a satisfied CCJ",
+          text: "Check evidence and timing before applying."
+        });
+      }
+      if (data.defaults !== "0") {
+        addUnique(reading, {
+          href: "phone-contract-with-defaults.html",
+          title: "Phone contract with defaults",
+          text: "Learn how defaults may affect mobile contract readiness."
+        });
+      }
+      if (data.bankruptcyStatus === "discharged" || data.bankruptcyStatus === "recent") {
+        addUnique(reading, {
+          href: "phone-contract-after-bankruptcy.html",
+          title: "Phone contract after bankruptcy",
+          text: "Review discharge, timing and affordability considerations."
+        });
+      }
+      if (data.creditScoreView === "poor" || data.creditScoreView === "unsure") {
+        addUnique(reading, {
+          href: "sim-only-with-bad-credit.html",
+          title: "SIM-only with bad credit",
+          text: "Consider lower-commitment planning while rebuilding."
+        });
+      }
+      addUnique(reading, {
+        href: "does-a-phone-contract-affect-credit-score.html",
+        title: "Does a phone contract affect credit score?",
+        text: "Understand how payment history may be reported."
       });
     }
 
@@ -558,6 +620,10 @@
           utilisationLabel: getLabel("utilisation", answers.utilisation),
           applications: answers.applications,
           applicationsLabel: getLabel("applications", answers.applications),
+          bankruptcyStatus: answers.bankruptcyStatus || "none",
+          bankruptcyStatusLabel: getLabel("bankruptcyStatus", answers.bankruptcyStatus || "none"),
+          creditScoreView: answers.creditScoreView || "stable",
+          creditScoreViewLabel: getLabel("creditScoreView", answers.creditScoreView || "stable"),
           goal: answers.goal,
           goalLabel: getLabel("goal", answers.goal)
         });

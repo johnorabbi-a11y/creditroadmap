@@ -72,6 +72,15 @@
             <option value="unsure">Unsure</option>
           </select>
           <p class="field-help">If you are unsure, check your statutory credit reports before applying for new credit.</p>
+
+          <label for="bankruptcyStatus">Bankruptcy or insolvency history</label>
+          <select id="bankruptcyStatus" name="bankruptcyStatus" required>
+            <option value="none">No bankruptcy</option>
+            <option value="discharged">Discharged bankruptcy</option>
+            <option value="recent">Recent or active bankruptcy</option>
+            <option value="unsure">Unsure</option>
+          </select>
+          <p class="field-help">Bankruptcy can affect applications differently depending on discharge status, timing and recent conduct.</p>
         </fieldset>
 
         <fieldset>
@@ -114,6 +123,15 @@
             <option value="75plus">75%+</option>
           </select>
           <p class="field-help">Lower revolving balances may reduce pressure on your profile, where repayment is affordable.</p>
+
+          <label for="creditScoreView">Broad credit score view</label>
+          <select id="creditScoreView" name="creditScoreView" required>
+            <option value="stable">Stable or good</option>
+            <option value="fair">Fair or rebuilding</option>
+            <option value="poor">Poor credit score</option>
+            <option value="unsure">Unsure</option>
+          </select>
+          <p class="field-help">This is only a broad self-assessment. Lenders and providers use their own criteria.</p>
         </fieldset>
 
         <fieldset>
