@@ -54,6 +54,13 @@
       recent: 35,
       unsure: 10
     },
+    debtSolutionStatus: {
+      none: 0,
+      iva: 24,
+      dmp: 18,
+      dro: 24,
+      unsure: 12
+    },
     creditScoreView: {
       stable: 0,
       fair: 8,
@@ -112,7 +119,7 @@
   }
 
   function scoreAnswer(category, value) {
-    return scoreTables[category][value] || 0;
+    return (scoreTables[category] && scoreTables[category][value]) || 0;
   }
 
   function calculateScore(data) {
@@ -124,6 +131,7 @@
       + scoreAnswer("utilisation", data.utilisation)
       + scoreAnswer("applications", data.applications)
       + scoreAnswer("bankruptcyStatus", data.bankruptcyStatus || "none")
+      + scoreAnswer("debtSolutionStatus", data.debtSolutionStatus || "none")
       + scoreAnswer("creditScoreView", data.creditScoreView || "stable");
 
     const hasVeryHighTrigger = data.ccjStatus === "unpaid"
@@ -132,7 +140,9 @@
       || data.missedPayments === "6plus"
       || data.utilisation === "75plus"
       || data.applications === "3plus"
-      || data.bankruptcyStatus === "recent";
+      || data.bankruptcyStatus === "recent"
+      || data.debtSolutionStatus === "iva"
+      || data.debtSolutionStatus === "dro";
 
     if (!hasVeryHighTrigger) {
       return Math.min(65, clampScore(rawScore));
@@ -149,7 +159,7 @@
 
     if (data.goal === "card") {
       addUnique(goalGuidance, "Credit card: lenders may focus on utilisation, recent applications and recent missed payments when assessing risk.");
-      addUnique(goalGuidance, "If you are rebuilding, credit-builder style products may be designed for thinner or imperfect files, but eligibility and affordability still matter and no approval is guaranteed.");
+      addUnique(goalGuidance, "If you are rebuilding, credit-builder style products may be designed for thinner or imperfect files, but eligibility and affordability still matter and acceptance is not certain.");
     }
 
     if (data.goal === "loan") {
@@ -171,6 +181,93 @@
 
   function buildRecommendedReading(data) {
     const reading = [];
+
+    if (data.bankruptcyStatus === "discharged" || data.bankruptcyStatus === "recent") {
+      addUnique(reading, {
+        href: "mortgage-after-bankruptcy.html",
+        title: "Mortgage after bankruptcy",
+        text: "Review mortgage preparation after bankruptcy, including discharge, deposit and affordability."
+      });
+      addUnique(reading, {
+        href: "credit-card-after-bankruptcy.html",
+        title: "Credit card after bankruptcy",
+        text: "Understand cautious credit card rebuilding after bankruptcy."
+      });
+      addUnique(reading, {
+        href: "improve-credit-after-bankruptcy.html",
+        title: "Improve credit after bankruptcy",
+        text: "Work through report checks, current payments and rebuilding steps."
+      });
+    }
+
+    if (data.debtSolutionStatus === "iva") {
+      addUnique(reading, {
+        href: "what-is-an-iva.html",
+        title: "What is an IVA?",
+        text: "Understand IVA basics and how formal arrangements may affect credit rebuilding."
+      });
+      addUnique(reading, {
+        href: "does-an-iva-affect-credit-score.html",
+        title: "Does an IVA affect credit score?",
+        text: "Review IVA credit-file impact, reporting and rebuilding considerations."
+      });
+      addUnique(reading, {
+        href: "mortgage-after-iva.html",
+        title: "Mortgage after an IVA",
+        text: "Check mortgage preparation after an IVA, including timing and affordability."
+      });
+      addUnique(reading, {
+        href: "car-finance-after-iva.html",
+        title: "Car finance after an IVA",
+        text: "Review car finance readiness after an IVA."
+      });
+      addUnique(reading, {
+        href: "credit-card-after-iva.html",
+        title: "Credit card after an IVA",
+        text: "Understand cautious credit card use after an IVA."
+      });
+    }
+
+    if (data.debtSolutionStatus === "dmp") {
+      addUnique(reading, {
+        href: "what-is-a-debt-management-plan.html",
+        title: "What is a debt management plan?",
+        text: "Understand DMP basics, credit-file reporting and rebuilding."
+      });
+      addUnique(reading, {
+        href: "mortgage-after-debt-management-plan.html",
+        title: "Mortgage after a debt management plan",
+        text: "Review mortgage preparation after a DMP."
+      });
+      addUnique(reading, {
+        href: "credit-card-after-debt-management-plan.html",
+        title: "Credit card after a debt management plan",
+        text: "Check credit card readiness after a DMP."
+      });
+      addUnique(reading, {
+        href: "car-finance-after-debt-management-plan.html",
+        title: "Car finance after a debt management plan",
+        text: "Review vehicle finance affordability after a DMP."
+      });
+    }
+
+    if (data.debtSolutionStatus === "dro") {
+      addUnique(reading, {
+        href: "what-is-a-debt-relief-order.html",
+        title: "What is a Debt Relief Order?",
+        text: "Understand DRO basics, credit-file impact and rebuilding considerations."
+      });
+      addUnique(reading, {
+        href: "credit-card-after-bankruptcy.html",
+        title: "Credit card after formal debt solutions",
+        text: "Read cautious credit card rebuilding guidance after serious debt markers."
+      });
+      addUnique(reading, {
+        href: "improve-credit-after-bankruptcy.html",
+        title: "Improve credit after formal debt solutions",
+        text: "Work through report accuracy, recent payments and application timing."
+      });
+    }
 
     if (data.ccjStatus !== "none" || data.ccjAge !== "none") {
       addUnique(reading, {
@@ -667,6 +764,8 @@
           applicationsLabel: getLabel("applications", answers.applications),
           bankruptcyStatus: answers.bankruptcyStatus || "none",
           bankruptcyStatusLabel: getLabel("bankruptcyStatus", answers.bankruptcyStatus || "none"),
+          debtSolutionStatus: answers.debtSolutionStatus || "none",
+          debtSolutionStatusLabel: getLabel("debtSolutionStatus", answers.debtSolutionStatus || "none"),
           creditScoreView: answers.creditScoreView || "stable",
           creditScoreViewLabel: getLabel("creditScoreView", answers.creditScoreView || "stable"),
           goal: answers.goal,
