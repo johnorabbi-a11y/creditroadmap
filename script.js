@@ -183,6 +183,12 @@
     const reading = [];
 
     addUnique(reading, {
+      href: "credit-progress-tracker.html",
+      title: "Credit Progress Tracker",
+      text: "Save local snapshots and compare broad credit progress over time."
+    });
+
+    addUnique(reading, {
       href: "credit-improvement-timeline-estimator.html",
       title: "Credit Improvement Timeline Estimator",
       text: "Estimate practical 30-day, 3-month, 6-month and 12-month credit rebuilding priorities."
@@ -332,6 +338,11 @@
         title: "Credit Utilisation Calculator",
         text: "Calculate your balance-to-limit percentage and see practical utilisation targets."
       });
+      addUnique(reading, {
+        href: "affordability-checker.html",
+        title: "Affordability Checker",
+        text: "Review monthly commitment pressure without calculating borrowing limits."
+      });
     }
 
     if (data.electoralRoll === "no" || data.electoralRoll === "unsure") {
@@ -343,6 +354,11 @@
     }
 
     if (data.goal === "mortgage") {
+      addUnique(reading, {
+        href: "mortgage-readiness-score.html",
+        title: "Mortgage Readiness Score",
+        text: "Check broad mortgage credit readiness factors and suggested next steps."
+      });
       addUnique(reading, {
         href: "mortgage-readiness-guide.html",
         title: "Mortgage readiness guide",

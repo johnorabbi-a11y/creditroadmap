@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Credit Progress Tracker UK | Credit Roadmap UK</title>
+  <meta name="description" content="Save local credit progress snapshots, view history, compare entries and track broad improvement signals in your browser only.">
+  <link rel="canonical" href="https://creditroadmap.co.uk/credit-progress-tracker.html">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where is my progress tracker data stored?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Entries are stored only in your browser using localStorage. There is no backend account or server storage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I delete entries?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Each saved snapshot has a delete button so you can remove it from localStorage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the tracker report to credit reference agencies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It is a personal planning tool only and does not report anything externally."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the improvement summary compare?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It compares your earliest and latest saved snapshots for risk score, CCJ status, defaults, utilisation and electoral roll status."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Credit Roadmap UK home">
+      <span class="brand-mark">CR</span>
+      <span>Credit Roadmap UK</span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="roadmap.html">Generate Roadmap</a>
+      <a href="progress-tracker.html">Progress Tracker</a>
+      <a href="ccj-guide.html">Guides</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+  </header>
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Local progress tool</p>
+      <h1>Credit Progress Tracker</h1>
+      <p>Save credit profile snapshots in your browser, compare entries and review broad improvement signals over time using localStorage only.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#tool">Use the tool</a>
+        <a class="button secondary" href="roadmap.html">Generate your roadmap</a>
+      </div>
+      <p class="microcopy">Educational only. This does not predict approval, borrowing limits or credit score changes.</p>
+    </section>
+    <section id="tool" class="section">
+      <div class="tool-layout">
+        <form class="form-card calculator-form" id="credit-progress-form">
+          <h2>Save a snapshot</h2>
+          <label for="cpt-date">Date</label>
+          <input id="cpt-date" type="date" required>
+          <label for="cpt-score">Risk score</label>
+          <input id="cpt-score" type="number" min="0" max="100" step="1" required>
+          <label for="cpt-ccj">CCJ status</label>
+          <select id="cpt-ccj"><option>No CCJ</option><option>Paid CCJ</option><option>Unpaid CCJ</option></select>
+          <label for="cpt-defaults">Defaults</label>
+          <select id="cpt-defaults"><option>0</option><option>1</option><option>2+</option><option>Unsure</option></select>
+          <label for="cpt-utilisation">Utilisation band</label>
+          <select id="cpt-utilisation"><option>Under 25%</option><option>25-50%</option><option>50-75%</option><option>75%+</option></select>
+          <label for="cpt-electoral">Electoral roll status</label>
+          <select id="cpt-electoral"><option>Yes</option><option>No</option><option>Unsure</option></select>
+          <div class="form-actions">
+            <button class="button primary" type="submit">Save snapshot</button>
+          </div>
+          <p class="microcopy">Saved locally in this browser only.</p>
+        </form>
+        <section class="results-card calculator-results" id="credit-progress-summary" aria-live="polite">
+          <h2>Improvement summary</h2>
+          <p>Save at least two entries to compare progress.</p>
+        </section>
+      </div>
+    </section>
+    <section class="section">
+      <div class="content-panel">
+        <div class="section-heading">
+          <p class="eyebrow">History</p>
+          <h2>Saved snapshots</h2>
+        </div>
+        <div id="credit-progress-history" class="history-list"></div>
+      </div>
+    </section>
+    <section class="section"><div class="content-panel"><h2>FAQ</h2><h3>Where is my progress tracker data stored?</h3><p>Entries are stored only in your browser using localStorage. There is no backend account or server storage.</p><h3>Can I delete entries?</h3><p>Yes. Each saved snapshot has a delete button so you can remove it from localStorage.</p><h3>Does the tracker report to credit reference agencies?</h3><p>No. It is a personal planning tool only and does not report anything externally.</p><h3>What does the improvement summary compare?</h3><p>It compares your earliest and latest saved snapshots for risk score, CCJ status, defaults, utilisation and electoral roll status.</p></div></section>
+  </main>
+  <footer class="site-footer">
+    <div>
+      <strong>Credit Roadmap UK</strong>
+      <p>General UK credit education only. This is not financial advice, debt advice, credit broking or a prediction of lender decisions.</p>
+    </div>
+    <nav aria-label="Footer links">
+      <a href="index.html">Home</a>
+      <a href="roadmap.html">Generate Roadmap</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+  </footer>
+  <script>
+    (function () {
+      const key = "creditRoadmapProductTracker";
+      const form = document.querySelector("#credit-progress-form");
+      const history = document.querySelector("#credit-progress-history");
+      const summary = document.querySelector("#credit-progress-summary");
+      const dateInput = document.querySelector("#cpt-date");
+      if (!dateInput.value) dateInput.value = new Date().toISOString().slice(0, 10);
+      function read() { try { return JSON.parse(localStorage.getItem(key)) || []; } catch (error) { return []; } }
+      function write(entries) { localStorage.setItem(key, JSON.stringify(entries)); }
+      function entryFromForm() {
+        return {
+          id: Date.now().toString(36) + Math.random().toString(16).slice(2),
+          date: document.querySelector("#cpt-date").value,
+          score: Number(document.querySelector("#cpt-score").value),
+          ccj: document.querySelector("#cpt-ccj").value,
+          defaults: document.querySelector("#cpt-defaults").value,
+          utilisation: document.querySelector("#cpt-utilisation").value,
+          electoral: document.querySelector("#cpt-electoral").value
+        };
+      }
+      function compare(entries) {
+        if (entries.length < 2) return "Save at least two entries to compare progress.";
+        const sorted = [...entries].sort((a, b) => a.date.localeCompare(b.date));
+        const first = sorted[0];
+        const latest = sorted[sorted.length - 1];
+        const scoreChange = latest.score - first.score;
+        const direction = scoreChange < 0 ? "lower risk score" : scoreChange > 0 ? "higher risk score" : "unchanged risk score";
+        return "From " + first.date + " to " + latest.date + ": " + direction + " (" + first.score + " to " + latest.score + "). Latest profile: " + latest.ccj + ", defaults " + latest.defaults + ", utilisation " + latest.utilisation + ", electoral roll " + latest.electoral + ".";
+      }
+      function render() {
+        const entries = read().sort((a, b) => b.date.localeCompare(a.date));
+        summary.innerHTML = '<h2>Improvement summary</h2><p>' + compare(entries) + '</p>';
+        if (!entries.length) {
+          history.innerHTML = "<p>No saved snapshots yet.</p>";
+          return;
+        }
+        history.innerHTML = entries.map((entry) => '<article class="tracker-entry"><div><strong>' + entry.date + '</strong><p>Risk score: ' + entry.score + ' | CCJ: ' + entry.ccj + ' | Defaults: ' + entry.defaults + ' | Utilisation: ' + entry.utilisation + ' | Electoral roll: ' + entry.electoral + '</p></div><button class="button secondary" type="button" data-delete="' + entry.id + '">Delete</button></article>').join("");
+      }
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const entries = read();
+        entries.push(entryFromForm());
+        write(entries);
+        render();
+        form.reset();
+        dateInput.value = new Date().toISOString().slice(0, 10);
+      });
+      history.addEventListener("click", function (event) {
+        const id = event.target && event.target.getAttribute("data-delete");
+        if (!id) return;
+        write(read().filter((entry) => entry.id !== id));
+        render();
+      });
+      render();
+    })();
+  </script>
+</body>
+</html>

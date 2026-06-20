@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Affordability Checker UK | Credit Roadmap UK</title>
+  <meta name="description" content="Use this educational UK affordability checker to compare salary, debt payments, housing costs and other commitments without calculating borrowing limits.">
+  <link rel="canonical" href="https://creditroadmap.co.uk/affordability-checker.html">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does this affordability checker calculate how much I can borrow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It does not calculate borrowing limits. It only gives an educational view of monthly commitment pressure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the affordability profile mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Comfortable, Moderate and Stretched are broad indicators based on commitments compared with estimated gross monthly income."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use take-home pay as well?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Gross salary is only a rough input, so checking take-home pay can give a clearer view of monthly budget pressure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this financial advice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It is general UK credit education only and does not replace qualified financial or debt advice."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Credit Roadmap UK home">
+      <span class="brand-mark">CR</span>
+      <span>Credit Roadmap UK</span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="roadmap.html">Generate Roadmap</a>
+      <a href="progress-tracker.html">Progress Tracker</a>
+      <a href="ccj-guide.html">Guides</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+  </header>
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Budget pressure tool</p>
+      <h1>Affordability Checker</h1>
+      <p>Review broad monthly commitment pressure before applying for credit. This tool does not calculate borrowing limits or predict lender decisions.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#tool">Use the tool</a>
+        <a class="button secondary" href="roadmap.html">Generate your roadmap</a>
+      </div>
+      <p class="microcopy">Educational only. This does not predict approval, borrowing limits or credit score changes.</p>
+    </section>
+    <section id="tool" class="section">
+      <div class="tool-layout">
+        <form class="form-card calculator-form" id="affordability-form">
+          <h2>Check affordability pressure</h2>
+          <label for="aff-salary">Annual salary (£)</label>
+          <input id="aff-salary" type="number" min="0" step="100" required>
+          <label for="aff-debts">Monthly debt payments (£)</label>
+          <input id="aff-debts" type="number" min="0" step="1" required>
+          <label for="aff-housing">Housing costs (£)</label>
+          <input id="aff-housing" type="number" min="0" step="1" required>
+          <label for="aff-other">Other commitments (£)</label>
+          <input id="aff-other" type="number" min="0" step="1" required>
+          <div class="form-actions">
+            <button class="button primary" type="submit">Check profile</button>
+          </div>
+        </form>
+        <section class="results-card calculator-results" id="affordability-results" aria-live="polite">
+          <h2>Your affordability profile</h2>
+          <p>Enter your figures to see whether the profile appears comfortable, moderate or stretched in this educational check.</p>
+        </section>
+      </div>
+    </section>
+    <section class="section band">
+      <div class="section-heading">
+        <p class="eyebrow">Take-home pay</p>
+        <h2>Check full take-home pay</h2>
+        <p>Gross salary does not show tax, National Insurance, pension contributions or student loan deductions. For a fuller income view, use <a href="https://aftertaxtool.com/salary-after-tax-uk.html">AfterTaxTool's UK salary calculator</a>.</p>
+      </div>
+    </section>
+    <section class="section"><div class="content-panel"><h2>FAQ</h2><h3>Does this affordability checker calculate how much I can borrow?</h3><p>No. It does not calculate borrowing limits. It only gives an educational view of monthly commitment pressure.</p><h3>What does the affordability profile mean?</h3><p>Comfortable, Moderate and Stretched are broad indicators based on commitments compared with estimated gross monthly income.</p><h3>Should I use take-home pay as well?</h3><p>Yes. Gross salary is only a rough input, so checking take-home pay can give a clearer view of monthly budget pressure.</p><h3>Is this financial advice?</h3><p>No. It is general UK credit education only and does not replace qualified financial or debt advice.</p></div></section>
+  </main>
+  <footer class="site-footer">
+    <div>
+      <strong>Credit Roadmap UK</strong>
+      <p>General UK credit education only. This is not financial advice, debt advice, credit broking or a prediction of lender decisions.</p>
+    </div>
+    <nav aria-label="Footer links">
+      <a href="index.html">Home</a>
+      <a href="roadmap.html">Generate Roadmap</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+  </footer>
+  <script>
+    (function () {
+      const form = document.querySelector("#affordability-form");
+      const results = document.querySelector("#affordability-results");
+      const gbp = new Intl.NumberFormat("en-GB", { style: "currency", currency: "GBP", maximumFractionDigits: 0 });
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const salary = Number(document.querySelector("#aff-salary").value || 0);
+        const debts = Number(document.querySelector("#aff-debts").value || 0);
+        const housing = Number(document.querySelector("#aff-housing").value || 0);
+        const other = Number(document.querySelector("#aff-other").value || 0);
+        if (salary <= 0) {
+          results.innerHTML = "<h2>Check salary</h2><p>Please enter an annual salary above £0.</p>";
+          return;
+        }
+        const monthlyGross = salary / 12;
+        const commitments = debts + housing + other;
+        const ratio = commitments / monthlyGross;
+        const profile = ratio < 0.35 ? "Comfortable" : ratio < 0.55 ? "Moderate" : "Stretched";
+        const cls = profile === "Comfortable" ? "risk-stable" : profile === "Moderate" ? "risk-attention" : "risk-high";
+        const notes = profile === "Comfortable" ? "Commitments look lower against gross monthly income in this simple check." : profile === "Moderate" ? "Commitments may need closer review, especially after tax and essential spending." : "Commitments look stretched in this simple check, so taking on more credit may add pressure.";
+        results.innerHTML = '<span class="risk-pill ' + cls + '">' + profile + '</span><h2>Estimated affordability profile: ' + profile + '</h2><div class="metric-grid"><div class="metric"><strong>' + gbp.format(monthlyGross) + '</strong><span>Estimated gross monthly income</span></div><div class="metric"><strong>' + gbp.format(commitments) + '</strong><span>Monthly commitments entered</span></div></div><p>' + notes + '</p><p class="microcopy">This does not calculate borrowing limits or replace a lender affordability assessment.</p>';
+      });
+    })();
+  </script>
+</body>
+</html>
