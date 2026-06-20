@@ -273,6 +273,51 @@
         title: "Can I get car finance with bad credit?",
         text: "Review common car finance readiness factors before applying."
       });
+      addUnique(reading, {
+        href: "improve-credit-before-car-finance.html",
+        title: "Improve credit before car finance",
+        text: "Work through report checks, balances, timing and affordability before applying."
+      });
+      addUnique(reading, {
+        href: "car-finance-credit-checks-explained.html",
+        title: "Car finance credit checks explained",
+        text: "Understand searches, identity checks and affordability assessment."
+      });
+      if (data.ccjStatus !== "none" || data.ccjAge !== "none") {
+        addUnique(reading, {
+          href: "car-finance-with-ccj.html",
+          title: "Car finance with a CCJ",
+          text: "Check how CCJ age, status and affordability may affect readiness."
+        });
+      }
+      if (data.ccjStatus === "paid") {
+        addUnique(reading, {
+          href: "car-finance-with-satisfied-ccj.html",
+          title: "Car finance with a satisfied CCJ",
+          text: "Review evidence, timing and credit-file accuracy before applying."
+        });
+      }
+      if (data.defaults === "1" || data.defaults === "2plus" || data.defaults === "unsure") {
+        addUnique(reading, {
+          href: "car-finance-with-defaults.html",
+          title: "Car finance with defaults",
+          text: "Check default dates, settlement status and application timing."
+        });
+      }
+      if (data.defaults === "1" || data.defaults === "2plus") {
+        addUnique(reading, {
+          href: "car-finance-with-unpaid-defaults.html",
+          title: "Car finance with unpaid defaults",
+          text: "Review why unresolved defaulted balances may be treated seriously."
+        });
+      }
+      if (data.bankruptcyStatus === "discharged" || data.bankruptcyStatus === "recent") {
+        addUnique(reading, {
+          href: "car-finance-after-bankruptcy.html",
+          title: "Car finance after bankruptcy",
+          text: "Understand discharge, timing, reporting and affordability considerations."
+        });
+      }
     }
 
     if (data.goal === "phone") {
