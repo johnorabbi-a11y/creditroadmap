@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CCJ Removal Date Calculator UK | Credit Roadmap UK</title>
+  <meta name="description" content="Estimate a UK CCJ six-year anniversary, approximate age and time remaining using the judgment date. General guidance only.">
+  <link rel="canonical" href="https://creditroadmap.co.uk/ccj-removal-date-calculator.html">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does a CCJ usually stay on a UK credit file?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CCJs typically remain on standard credit reports for six years from the judgment date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the six-year anniversary promise removal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This calculator gives an estimated anniversary only. You should check your credit reports and public record information."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does paying a CCJ remove it immediately?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Payment may update the CCJ as satisfied, but a visible CCJ can still affect lender decisions while it remains on credit files."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I check if the date looks wrong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check the judgment date, court record, satisfaction status and all credit reports. Seek qualified support if you are unsure how to deal with a judgment."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Credit Roadmap UK home">
+      <span class="brand-mark">CR</span>
+      <span>Credit Roadmap UK</span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="roadmap.html">Generate Roadmap</a>
+      <a href="progress-tracker.html">Progress Tracker</a>
+      <a href="ccj-guide.html">Guides</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+  </header>
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Free CCJ timeline tool</p>
+      <h1>CCJ Removal Date Calculator</h1>
+      <p>Estimate the six-year anniversary of a County Court Judgment and understand how long it has been visible. This is an educational date estimate, not a promise of removal.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#calculator">Use the calculator</a>
+        <a class="button secondary" href="roadmap.html">Generate your roadmap</a>
+      </div>
+      <p class="microcopy">This is general guidance for a UK context only. It does not predict a credit score or lender decision.</p>
+    </section>
+    <section id="calculator" class="section">
+      <div class="tool-layout">
+        <form class="form-card calculator-form" id="ccj-date-form">
+          <h2>Estimate your CCJ timeline</h2>
+          <p class="microcopy">Use the judgment date shown on your court record or credit report.</p>
+          <label for="judgment-date">CCJ judgment date</label>
+          <input id="judgment-date" name="judgment-date" type="date" required>
+          <div class="form-actions">
+            <button class="button primary" type="submit">Estimate date</button>
+          </div>
+        </form>
+        <section class="results-card calculator-results" id="ccj-date-results" aria-live="polite">
+          <h2>Your result</h2>
+          <p>Enter the judgment date to estimate CCJ age, six-year anniversary and approximate time remaining.</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="section band">
+      <div class="section-heading">
+        <p class="eyebrow">Important wording</p>
+        <h2>CCJs typically remain on standard credit reports for six years from the judgment date.</h2>
+        <p>The exact reporting position can depend on the records held by courts and credit reference agencies. Check your actual reports before relying on any estimate.</p>
+      </div>
+      <div class="cards three">
+        <article class="card"><h3>Check status</h3><p>If paid, confirm the CCJ is showing as satisfied where appropriate.</p></article>
+        <article class="card"><h3>Check reports</h3><p>Review all statutory credit reports because records may not update at the same time everywhere.</p></article>
+        <article class="card"><h3>Plan next steps</h3><p><a href="ccj-guide.html">Read the CCJ guide</a> or <a href="roadmap.html">generate a roadmap</a> for wider preparation.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="content-panel">
+        <h2>FAQ</h2>
+        <h3>How long does a CCJ usually stay on a UK credit file?</h3><p>CCJs typically remain on standard credit reports for six years from the judgment date.</p>
+        <h3>Does the six-year anniversary promise removal?</h3><p>No. This calculator gives an estimated anniversary only. You should check your credit reports and public record information.</p>
+        <h3>Does paying a CCJ remove it immediately?</h3><p>Payment may update the CCJ as satisfied, but a visible CCJ can still affect lender decisions while it remains on credit files.</p>
+        <h3>What should I check if the date looks wrong?</h3><p>Check the judgment date, court record, satisfaction status and all credit reports. Seek qualified support if you are unsure how to deal with a judgment.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div>
+      <strong>Credit Roadmap UK</strong>
+      <p>General UK credit education only. This is not financial advice, debt advice or credit broking.</p>
+    </div>
+    <nav aria-label="Footer links">
+      <a href="roadmap.html">Generate Roadmap</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="privacy-policy.html">Privacy</a>
+    </nav>
+  </footer>
+  <script>
+    (function () {
+      const form = document.querySelector("#ccj-date-form");
+      const results = document.querySelector("#ccj-date-results");
+      const formatter = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "long", year: "numeric" });
+      function diffParts(from, to) {
+        let years = to.getFullYear() - from.getFullYear();
+        let months = to.getMonth() - from.getMonth();
+        let days = to.getDate() - from.getDate();
+        if (days < 0) {
+          months -= 1;
+          const previousMonth = new Date(to.getFullYear(), to.getMonth(), 0).getDate();
+          days += previousMonth;
+        }
+        if (months < 0) {
+          years -= 1;
+          months += 12;
+        }
+        return { years: Math.max(0, years), months: Math.max(0, months), days: Math.max(0, days) };
+      }
+      function describe(parts) {
+        const text = [];
+        if (parts.years) text.push(parts.years + " year" + (parts.years === 1 ? "" : "s"));
+        if (parts.months) text.push(parts.months + " month" + (parts.months === 1 ? "" : "s"));
+        if (parts.days || !text.length) text.push(parts.days + " day" + (parts.days === 1 ? "" : "s"));
+        return text.join(", ");
+      }
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const raw = document.querySelector("#judgment-date").value;
+        const judgmentDate = new Date(raw + "T00:00:00");
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        if (Number.isNaN(judgmentDate.getTime()) || judgmentDate > today) {
+          results.innerHTML = "<h2>Check the date</h2><p>Please enter a valid judgment date that is not in the future.</p>";
+          return;
+        }
+        const anniversary = new Date(judgmentDate);
+        anniversary.setFullYear(anniversary.getFullYear() + 6);
+        const age = diffParts(judgmentDate, today);
+        const remaining = today >= anniversary ? null : diffParts(today, anniversary);
+        results.innerHTML = '<span class="risk-pill risk-attention">Estimated timeline</span>' +
+          '<h2>' + formatter.format(anniversary) + '</h2>' +
+          '<div class="metric-grid"><div class="metric"><strong>' + describe(age) + '</strong><span>Approximate CCJ age</span></div><div class="metric"><strong>' + (remaining ? describe(remaining) : "Past six years") + '</strong><span>Approximate time remaining</span></div></div>' +
+          '<p>CCJs typically remain on standard credit reports for six years from the judgment date.</p>' +
+          '<p class="microcopy">This is an estimate only. Check your actual credit reports and records before making decisions.</p>';
+      });
+    })();
+  </script>
+</body>
+</html>

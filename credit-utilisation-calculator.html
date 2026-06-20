@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Credit Utilisation Calculator UK | Credit Roadmap UK</title>
+  <meta name="description" content="Use this UK credit utilisation calculator to estimate your balance-to-limit percentage, see a simple rating and plan practical balance reduction steps.">
+  <link rel="canonical" href="https://creditroadmap.co.uk/credit-utilisation-calculator.html">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is credit utilisation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Credit utilisation is the percentage of available revolving credit you are using, usually based on credit card limits and balances."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is lower utilisation always better?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lower utilisation can often look more comfortable, but lenders use their own criteria and may also consider income, payment history, affordability and recent applications."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this calculator predict my credit score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It gives an educational utilisation band only and does not estimate credit score changes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I close an old card to reduce utilisation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Closing an account can reduce available limit and may increase utilisation if balances remain. Consider the wider impact before making changes."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Credit Roadmap UK home">
+      <span class="brand-mark">CR</span>
+      <span>Credit Roadmap UK</span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="roadmap.html">Generate Roadmap</a>
+      <a href="progress-tracker.html">Progress Tracker</a>
+      <a href="ccj-guide.html">Guides</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+  </header>
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Free credit tool</p>
+      <h1>Credit Utilisation Calculator</h1>
+      <p>Estimate how much of your available credit you are using and see practical, cautious steps for reducing balance pressure before future applications.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#calculator">Use the calculator</a>
+        <a class="button secondary" href="roadmap.html">Generate your roadmap</a>
+      </div>
+      <p class="microcopy">This is general guidance for a UK context only. It does not predict a credit score or lender decision.</p>
+    </section>
+    <section id="calculator" class="section">
+      <div class="tool-layout">
+        <form class="form-card calculator-form" id="utilisation-form">
+          <h2>Calculate your utilisation</h2>
+          <p class="microcopy">Enter the combined limit and balance across relevant credit cards or revolving accounts.</p>
+          <label for="credit-limit">Total credit limit (£)</label>
+          <input id="credit-limit" name="credit-limit" type="number" inputmode="decimal" min="0" step="0.01" required>
+          <label for="credit-balance">Total balances (£)</label>
+          <input id="credit-balance" name="credit-balance" type="number" inputmode="decimal" min="0" step="0.01" required>
+          <div class="form-actions">
+            <button class="button primary" type="submit">Calculate utilisation</button>
+          </div>
+        </form>
+        <section class="results-card calculator-results" id="utilisation-results" aria-live="polite">
+          <h2>Your result</h2>
+          <p>Enter your figures to see your utilisation percentage, rating and practical next steps.</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="section band">
+      <div class="section-heading">
+        <p class="eyebrow">How to use this result</p>
+        <h2>Utilisation is one signal, not the whole decision.</h2>
+        <p>High utilisation may suggest pressure on available credit. Lower balances may help your profile look more controlled, but affordability, payment history, adverse markers and application timing can all matter too.</p>
+      </div>
+      <div class="cards three">
+        <article class="card"><h3>Suggested target</h3><p>Many people aim to move below 50% first, then below 25% if affordable and realistic.</p></article>
+        <article class="card"><h3>Practical focus</h3><p>Avoid adding to revolving balances, pay more than the minimum where affordable and review spending patterns.</p></article>
+        <article class="card"><h3>Next tool</h3><p><a href="credit-improvement-timeline-estimator.html">Estimate your credit improvement timeline</a> after checking your utilisation.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="content-panel">
+        <h2>FAQ</h2>
+        <h3>What is credit utilisation?</h3><p>Credit utilisation is the percentage of available revolving credit you are using, usually based on credit card limits and balances.</p>
+        <h3>Is lower utilisation always better?</h3><p>Lower utilisation can often look more comfortable, but lenders use their own criteria and may also consider income, payment history, affordability and recent applications.</p>
+        <h3>Does this calculator predict my credit score?</h3><p>No. It gives an educational utilisation band only and does not estimate credit score changes.</p>
+        <h3>Should I close an old card to reduce utilisation?</h3><p>Closing an account can reduce available limit and may increase utilisation if balances remain. Consider the wider impact before making changes.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div>
+      <strong>Credit Roadmap UK</strong>
+      <p>General UK credit education only. This is not financial advice, debt advice or credit broking.</p>
+    </div>
+    <nav aria-label="Footer links">
+      <a href="roadmap.html">Generate Roadmap</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="privacy-policy.html">Privacy</a>
+    </nav>
+  </footer>
+  <script>
+    (function () {
+      const form = document.querySelector("#utilisation-form");
+      const results = document.querySelector("#utilisation-results");
+      const bands = [
+        { max: 25, rating: "Excellent", className: "risk-stable", target: "Maintain utilisation below 25% where possible.", tips: ["Keep balances controlled before statement dates.", "Continue paying on time and avoid unnecessary applications."] },
+        { max: 50, rating: "Good", className: "risk-attention", target: "A useful next target is below 25% if affordable.", tips: ["Reduce balances gradually while keeping payments on time.", "Avoid increasing card spending while preparing for applications."] },
+        { max: 75, rating: "Needs Improvement", className: "risk-high", target: "Aim below 50% first, then work towards below 25%.", tips: ["Prioritise the highest utilisation cards.", "Pause new borrowing where possible while balances reduce."] },
+        { max: Infinity, rating: "High Risk", className: "risk-very", target: "Aim below 75% first, then below 50% in stages.", tips: ["Avoid adding to revolving balances where possible.", "Consider reviewing your budget or speaking to a qualified adviser if payments are difficult."] }
+      ];
+      function money(value) {
+        return new Intl.NumberFormat("en-GB", { style: "currency", currency: "GBP" }).format(value);
+      }
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const limit = Number(document.querySelector("#credit-limit").value);
+        const balance = Number(document.querySelector("#credit-balance").value);
+        if (!limit || limit <= 0 || balance < 0) {
+          results.innerHTML = "<h2>Check your figures</h2><p>Please enter a credit limit above £0 and a balance of £0 or more.</p>";
+          return;
+        }
+        const percent = Math.max(0, (balance / limit) * 100);
+        const band = bands.find((item) => percent <= item.max);
+        results.innerHTML = '<span class="risk-pill ' + band.className + '">' + band.rating + '</span>' +
+          '<h2>' + percent.toFixed(1) + '% utilisation</h2>' +
+          '<div class="metric-grid"><div class="metric"><strong>' + money(limit) + '</strong><span>Total limit</span></div><div class="metric"><strong>' + money(balance) + '</strong><span>Total balances</span></div></div>' +
+          '<h3>Suggested target</h3><p>' + band.target + '</p>' +
+          '<h3>Improvement tips</h3><ul>' + band.tips.map((tip) => '<li>' + tip + '</li>').join("") + '</ul>' +
+          '<p class="microcopy">This calculator is educational and does not predict approval or credit score movement.</p>';
+      });
+    })();
+  </script>
+</body>
+</html>

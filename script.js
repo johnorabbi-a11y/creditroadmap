@@ -182,6 +182,20 @@
   function buildRecommendedReading(data) {
     const reading = [];
 
+    addUnique(reading, {
+      href: "credit-improvement-timeline-estimator.html",
+      title: "Credit Improvement Timeline Estimator",
+      text: "Estimate practical 30-day, 3-month, 6-month and 12-month credit rebuilding priorities."
+    });
+
+    if (data.ccjStatus !== "none" || data.ccjAge !== "none") {
+      addUnique(reading, {
+        href: "ccj-removal-date-calculator.html",
+        title: "CCJ Removal Date Calculator",
+        text: "Estimate the six-year anniversary and approximate timeline for a CCJ."
+      });
+    }
+
     if (data.goal === "card") {
       addUnique(reading, { href: "improve-credit-before-applying-for-a-credit-card.html", title: "Improve credit before applying for a credit card", text: "Check reports, utilisation, timing and recent conduct before applying." });
       addUnique(reading, { href: "credit-card-utilisation-explained.html", title: "Credit card utilisation explained", text: "Understand how card balances and limits may affect readiness." });
@@ -312,6 +326,11 @@
         href: "credit-utilisation-guide.html",
         title: "Credit utilisation guide",
         text: "See practical ways to reduce high balance pressure over time."
+      });
+      addUnique(reading, {
+        href: "credit-utilisation-calculator.html",
+        title: "Credit Utilisation Calculator",
+        text: "Calculate your balance-to-limit percentage and see practical utilisation targets."
       });
     }
 
