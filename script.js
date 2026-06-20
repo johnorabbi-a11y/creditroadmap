@@ -182,6 +182,18 @@
   function buildRecommendedReading(data) {
     const reading = [];
 
+    if (data.goal === "card") {
+      addUnique(reading, { href: "improve-credit-before-applying-for-a-credit-card.html", title: "Improve credit before applying for a credit card", text: "Check reports, utilisation, timing and recent conduct before applying." });
+      addUnique(reading, { href: "credit-card-utilisation-explained.html", title: "Credit card utilisation explained", text: "Understand how card balances and limits may affect readiness." });
+      addUnique(reading, { href: "does-applying-for-a-credit-card-affect-credit-score.html", title: "Does applying for a credit card affect credit score?", text: "Review searches, eligibility checks and application timing." });
+      addUnique(reading, { href: "how-long-should-i-wait-between-credit-card-applications.html", title: "How long to wait between card applications", text: "Plan safer spacing between applications." });
+      if (data.ccjStatus !== "none" || data.ccjAge !== "none") addUnique(reading, { href: "can-i-get-a-credit-card-with-a-ccj.html", title: "Credit card with a CCJ", text: "Review CCJ status, timing and card readiness." });
+      if (data.defaults !== "0") addUnique(reading, { href: "can-i-get-a-credit-card-with-defaults.html", title: "Credit card with defaults", text: "Check default dates, settlement status and application timing." });
+      if (data.bankruptcyStatus === "discharged" || data.bankruptcyStatus === "recent") addUnique(reading, { href: "can-i-get-a-credit-card-after-bankruptcy.html", title: "Credit card after bankruptcy", text: "Review discharge status and cautious rebuilding steps." });
+      if (data.debtSolutionStatus === "iva") addUnique(reading, { href: "can-i-get-a-credit-card-after-an-iva.html", title: "Credit card after an IVA", text: "Review IVA status, completion and card readiness." });
+      if (data.debtSolutionStatus === "dmp") addUnique(reading, { href: "can-i-get-a-credit-card-after-a-debt-management-plan.html", title: "Credit card after a debt management plan", text: "Review DMP status, defaults and card rebuilding." });
+    }
+
     if (data.bankruptcyStatus === "discharged" || data.bankruptcyStatus === "recent") {
       addUnique(reading, {
         href: "mortgage-after-bankruptcy.html",
