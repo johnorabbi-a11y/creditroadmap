@@ -183,6 +183,12 @@
     const reading = [];
 
     addUnique(reading, {
+      href: "personal-improvement-plan.html",
+      title: "Personal Improvement Plan",
+      text: "Turn your roadmap factors into a staged action plan you can save or export."
+    });
+
+    addUnique(reading, {
       href: "credit-progress-tracker.html",
       title: "Credit Progress Tracker",
       text: "Save local snapshots and compare broad credit progress over time."
@@ -767,7 +773,10 @@
         <section class="result-section tracker-save-panel">
           <h3>Track this result</h3>
           <p>Save this roadmap result in your browser so you can compare it with future snapshots. Nothing is sent to a lender, broker or credit reference agency.</p>
-          <button class="button primary" type="button" id="save-roadmap-result">Save This Result</button>
+          <div class="form-actions">
+            <button class="button primary" type="button" id="save-roadmap-result">Save This Result</button>
+            <button class="button secondary" type="button" id="launch-improvement-plan">Generate Improvement Plan</button>
+          </div>
           <p class="microcopy" id="save-roadmap-status" aria-live="polite"></p>
         </section>
 
@@ -786,7 +795,28 @@
     `;
 
     const saveButton = document.querySelector("#save-roadmap-result");
+    const planButton = document.querySelector("#launch-improvement-plan");
     const saveStatus = document.querySelector("#save-roadmap-status");
+    if (planButton) {
+      planButton.addEventListener("click", () => {
+        localStorage.setItem("creditRoadmapPlanDraft", JSON.stringify({
+          savedAt: new Date().toISOString(),
+          score: roadmap.score,
+          band: roadmap.band.label,
+          summary: roadmap.summary,
+          blockers: roadmap.blockers,
+          quickWins: roadmap.quickWins,
+          thirtyDay: roadmap.thirtyDay,
+          ninetyDay: roadmap.ninetyDay,
+          twelveMonth: roadmap.twelveMonth,
+          warnings: roadmap.notes,
+          opportunities: roadmap.goalGuidance,
+          answers: roadmap.answers
+        }));
+        window.location.href = "personal-improvement-plan.html";
+      });
+    }
+
     if (saveButton) {
       saveButton.addEventListener("click", () => {
         const answers = roadmap.answers;

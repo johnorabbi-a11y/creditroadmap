@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal Improvement Plan | Credit Roadmap UK</title>
+  <meta name="description" content="Generate a free personalised UK credit improvement action plan with 30 day, 60 day, 90 day, 6 month and 12 month priorities.">
+  <link rel="canonical" href="https://creditroadmap.co.uk/personal-improvement-plan.html">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does the personal improvement plan predict credit score changes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The plan is an educational action checklist only and does not predict credit scores, lender decisions or outcomes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I save my plan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Saved plans use localStorage in your browser only. There is no backend account or server storage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I export the plan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The export button downloads a plain text summary for your own records."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can this promise acceptance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Lenders use their own criteria and this tool does not promise acceptance or any particular result."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Credit Roadmap UK home">
+      <span class="brand-mark">CR</span>
+      <span>Credit Roadmap UK</span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="roadmap.html">Generate Roadmap</a>
+      <a href="progress-tracker.html">Progress Tracker</a>
+      <a href="ccj-guide.html">Guides</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Free planning tool</p>
+      <h1>Personal Improvement Plan</h1>
+      <p>Generate a practical UK-focused action plan from your credit-file factors and goals. This is educational only and does not predict scores, approval or outcomes.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#planner">Create plan</a>
+        <a class="button secondary" href="roadmap.html">Generate roadmap first</a>
+      </div>
+      <p class="microcopy">Plans can be saved locally in this browser and exported as a text file for your own records.</p>
+    </section>
+
+    <section id="planner" class="section">
+      <div class="tool-layout">
+        <form class="form-card calculator-form" id="plan-form">
+          <h2>Plan inputs</h2>
+          <p class="microcopy" id="prefill-note">Complete the form or launch this page from a roadmap result to prefill the main factors.</p>
+
+          <label for="plan-ccj">CCJ status</label>
+          <select id="plan-ccj">
+            <option value="none">No CCJ</option>
+            <option value="paid">Paid CCJ</option>
+            <option value="unpaid">Unpaid CCJ</option>
+          </select>
+
+          <label for="plan-defaults">Defaults</label>
+          <select id="plan-defaults">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2plus">2+</option>
+            <option value="unsure">Unsure</option>
+          </select>
+
+          <label for="plan-missed">Missed payments</label>
+          <select id="plan-missed">
+            <option value="none">None</option>
+            <option value="1to2">1-2</option>
+            <option value="3to6">3-6</option>
+            <option value="6plus">6+</option>
+          </select>
+
+          <label for="plan-electoral">Electoral roll</label>
+          <select id="plan-electoral">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="unsure">Unsure</option>
+          </select>
+
+          <label for="plan-utilisation">Credit utilisation</label>
+          <select id="plan-utilisation">
+            <option value="under25">Under 25%</option>
+            <option value="25to50">25-50%</option>
+            <option value="50to75">50-75%</option>
+            <option value="75plus">75%+</option>
+          </select>
+
+          <fieldset class="compact-fieldset">
+            <legend>Goals</legend>
+            <label class="checkbox-row"><input id="goal-mortgage" type="checkbox"> Mortgage</label>
+            <label class="checkbox-row"><input id="goal-car" type="checkbox"> Car finance</label>
+            <label class="checkbox-row"><input id="goal-card" type="checkbox"> Credit card</label>
+            <label class="checkbox-row"><input id="goal-phone" type="checkbox"> Phone contract</label>
+          </fieldset>
+
+          <div class="form-actions">
+            <button class="button primary" type="submit">Generate plan</button>
+            <button class="button secondary" type="reset">Reset</button>
+          </div>
+        </form>
+
+        <section class="results-card calculator-results" id="plan-results" aria-live="polite">
+          <h2>Your plan will appear here</h2>
+          <p>Generate a plan to see priority actions, quick wins, timelines, warnings and opportunities.</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="content-panel">
+        <h2>Saved plans</h2>
+        <div id="saved-plans" class="history-list"></div>
+      </div>
+    </section>
+
+    <section class="section band">
+      <div class="section-heading">
+        <p class="eyebrow">How to use it</p>
+        <h2>Treat the plan as a checklist, not a prediction.</h2>
+        <p>The plan helps prioritise practical steps such as report checks, electoral roll updates, application pauses, utilisation reduction and payment stability. Lenders may consider their own criteria and this tool does not promise outcomes.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="content-panel">
+        <h2>FAQ</h2>
+        <h3>Does the personal improvement plan predict credit score changes?</h3><p>No. The plan is an educational action checklist only and does not predict credit scores, lender decisions or outcomes.</p><h3>Can I save my plan?</h3><p>Yes. Saved plans use localStorage in your browser only. There is no backend account or server storage.</p><h3>Can I export the plan?</h3><p>Yes. The export button downloads a plain text summary for your own records.</p><h3>Can this promise acceptance?</h3><p>No. Lenders use their own criteria and this tool does not promise acceptance or any particular result.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Credit Roadmap UK. General guidance only.</p>
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="roadmap.html">Roadmap Generator</a>
+      <a href="credit-progress-tracker.html">Credit Progress Tracker</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+  </footer>
+
+  <script>
+    (function () {
+      const transferKey = "creditRoadmapPlanDraft";
+      const savedKey = "creditRoadmapSavedPlans";
+      const form = document.querySelector("#plan-form");
+      const results = document.querySelector("#plan-results");
+      const savedPlans = document.querySelector("#saved-plans");
+      const prefillNote = document.querySelector("#prefill-note");
+      let currentPlan = null;
+
+      function value(id) {
+        return document.querySelector(id).value;
+      }
+
+      function checked(id) {
+        return document.querySelector(id).checked;
+      }
+
+      function add(list, item) {
+        if (!list.includes(item)) list.push(item);
+      }
+
+      function list(items) {
+        if (!items.length) return "<p class=\"positive-note\">No specific item was triggered by this answer set.</p>";
+        return "<ul>" + items.map((item) => "<li>" + item + "</li>").join("") + "</ul>";
+      }
+
+      function readSaved() {
+        try {
+          return JSON.parse(localStorage.getItem(savedKey)) || [];
+        } catch (error) {
+          return [];
+        }
+      }
+
+      function writeSaved(plans) {
+        localStorage.setItem(savedKey, JSON.stringify(plans));
+      }
+
+      function collectInputs() {
+        return {
+          ccjStatus: value("#plan-ccj"),
+          defaults: value("#plan-defaults"),
+          missedPayments: value("#plan-missed"),
+          electoralRoll: value("#plan-electoral"),
+          utilisation: value("#plan-utilisation"),
+          goals: {
+            mortgage: checked("#goal-mortgage"),
+            car: checked("#goal-car"),
+            card: checked("#goal-card"),
+            phone: checked("#goal-phone")
+          }
+        };
+      }
+
+      function buildPlan(data) {
+        const priorityActions = [];
+        const quickWins = ["Check all statutory credit reports for accuracy across names, addresses, balances and account statuses."];
+        const medium = ["Review progress after reporting cycles update, because balances and account statuses may not change immediately."];
+        const longTerm = ["Continue stability and review the plan every few months as credit-file markers age."];
+        const warnings = [];
+        const opportunities = [];
+        const days30 = ["Check credit reports and list the main blockers visible today.", "Avoid non-essential applications while you work through the plan."];
+        const days60 = ["Review whether address records, payment reminders and active accounts are stable.", "Keep evidence of any satisfied debts or corrected records."];
+        const days90 = ["Recheck balances and recent payment conduct after reporting cycles update."];
+        const months6 = ["Build a cleaner recent payment pattern and keep utilisation moving in the right direction where affordable."];
+        const months12 = ["Continue stable payments, avoid rushed applications and let older adverse markers age where possible."];
+
+        if (data.ccjStatus === "unpaid") {
+          add(priorityActions, "Review the unpaid CCJ and consider resolving or satisfying it where possible.");
+          add(warnings, "An unpaid CCJ may be treated seriously by lenders, especially for larger borrowing.");
+          add(days30, "Check CCJ judgment date, amount and current status.");
+          add(days60, "If the CCJ status changes, keep evidence and check reports update where appropriate.");
+        }
+        if (data.ccjStatus === "paid") {
+          add(priorityActions, "Check that the CCJ is recorded as satisfied where appropriate.");
+          add(medium, "Keep evidence of satisfaction in case future applications ask for context.");
+          add(days30, "Confirm the satisfied CCJ appears accurately on your reports.");
+        }
+        if (data.defaults === "1" || data.defaults === "2plus") {
+          add(priorityActions, "List each default with date, balance and settlement status.");
+          add(warnings, data.defaults === "2plus" ? "Multiple defaults may make some applications more difficult while visible." : "A default may still affect decisions while visible.");
+          add(days60, "Check default dates and settlement status across all reports.");
+          add(months6, "Work on stable recent conduct while defaults become older.");
+        }
+        if (data.defaults === "unsure") {
+          add(quickWins, "Check statutory reports to confirm whether defaults are recorded.");
+          add(days30, "Make a simple list of any defaulted accounts found on your reports.");
+        }
+        if (data.missedPayments !== "none") {
+          add(priorityActions, "Bring any active accounts up to date where possible and prevent further missed payments.");
+          add(warnings, "Recent missed payments may weigh heavily because they reflect current conduct.");
+          add(days30, "Set payment reminders or direct debits for active accounts.");
+          add(days90, "Aim for a cleaner three-month payment pattern before non-essential applications.");
+        }
+        if (data.electoralRoll === "no" || data.electoralRoll === "unsure") {
+          add(quickWins, "Register on the electoral roll or confirm address details if eligible.");
+          add(days30, "Check address consistency across bank accounts, credit accounts and reports.");
+          add(opportunities, "Address consistency may help identity checks feel smoother.");
+        }
+        if (data.utilisation === "50to75" || data.utilisation === "75plus") {
+          add(priorityActions, "Reduce credit utilisation in stages where affordable.");
+          add(warnings, "High utilisation may suggest pressure on available credit.");
+          add(days30, data.utilisation === "75plus" ? "Aim to move balances below 75% first." : "Aim to reduce utilisation below 50%.");
+          add(days90, "Work towards utilisation below 50%, then below 25% if realistic.");
+          add(opportunities, "Lower utilisation can often be one of the more practical factors to improve over time.");
+        } else {
+          add(opportunities, "Current utilisation band appears calmer; maintain it if affordable.");
+        }
+        if (data.goals.mortgage) {
+          add(priorityActions, "For a mortgage goal, review deposit, affordability, credit reports and recent bank conduct together.");
+          add(warnings, "Mortgage lenders may look closely at CCJs, defaults, missed payments, deposit size, affordability and time since issues occurred.");
+          add(months6, "Build deposit evidence, reduce unsecured balances and keep documents organised.");
+          add(months12, "Continue stable payments and review mortgage readiness before any full application.");
+        }
+        if (data.goals.car) {
+          add(opportunities, "For car finance, prepare around affordability, deposit, credit checks and recent conduct.");
+          add(days60, "Review monthly budget pressure before taking on another vehicle commitment.");
+        }
+        if (data.goals.card) {
+          add(opportunities, "For credit card goals, focus on utilisation, application spacing and recent payment stability.");
+          add(days90, "Avoid repeated applications and review eligibility carefully where available.");
+        }
+        if (data.goals.phone) {
+          add(opportunities, "For phone contract goals, address consistency and recent payments may matter.");
+          add(days60, "Check that current address details match across application records and credit reports.");
+        }
+
+        return {
+          id: Date.now().toString(36) + Math.random().toString(16).slice(2),
+          createdAt: new Date().toISOString(),
+          data,
+          priorityActions,
+          quickWins,
+          medium,
+          longTerm,
+          warnings,
+          opportunities,
+          timeline: { days30, days60, days90, months6, months12 }
+        };
+      }
+
+      function planText(plan) {
+        function section(title, items) {
+          return title + "\n" + (items.length ? items.map((item) => "- " + item).join("\n") : "- No specific item triggered") + "\n";
+        }
+        return [
+          "Credit Roadmap UK - Personal Improvement Plan",
+          "Created: " + new Date(plan.createdAt).toLocaleString("en-GB"),
+          "",
+          section("Priority Actions", plan.priorityActions),
+          section("Quick Wins", plan.quickWins),
+          section("Medium-Term Improvements", plan.medium),
+          section("Long-Term Improvements", plan.longTerm),
+          section("Warnings", plan.warnings),
+          section("Opportunities", plan.opportunities),
+          section("30 Day Plan", plan.timeline.days30),
+          section("60 Day Plan", plan.timeline.days60),
+          section("90 Day Plan", plan.timeline.days90),
+          section("6 Month Plan", plan.timeline.months6),
+          section("12 Month Plan", plan.timeline.months12),
+          "Educational only. This does not predict scores, approval or outcomes."
+        ].join("\n");
+      }
+
+      function renderPlan(plan) {
+        currentPlan = plan;
+        results.innerHTML = '<h2>Your personal improvement plan</h2>' +
+          '<div class="plan-actions"><button class="button primary" type="button" id="save-plan">Save Plan</button><button class="button secondary" type="button" id="export-plan">Export Plan</button></div>' +
+          '<div class="plan-grid">' +
+          '<section><h3>Priority Actions</h3>' + list(plan.priorityActions) + '</section>' +
+          '<section><h3>Quick Wins</h3>' + list(plan.quickWins) + '</section>' +
+          '<section><h3>Medium-Term Improvements</h3>' + list(plan.medium) + '</section>' +
+          '<section><h3>Long-Term Improvements</h3>' + list(plan.longTerm) + '</section>' +
+          '<section><h3>Warnings</h3>' + list(plan.warnings) + '</section>' +
+          '<section><h3>Opportunities</h3>' + list(plan.opportunities) + '</section>' +
+          '</div>' +
+          '<div class="timeline-results"><h3>30 Day Plan</h3>' + list(plan.timeline.days30) +
+          '<h3>60 Day Plan</h3>' + list(plan.timeline.days60) +
+          '<h3>90 Day Plan</h3>' + list(plan.timeline.days90) +
+          '<h3>6 Month Plan</h3>' + list(plan.timeline.months6) +
+          '<h3>12 Month Plan</h3>' + list(plan.timeline.months12) + '</div>' +
+          '<p class="microcopy" id="plan-status" aria-live="polite"></p>';
+      }
+
+      function renderSavedPlans() {
+        const plans = readSaved();
+        if (!plans.length) {
+          savedPlans.innerHTML = "<p>No saved plans yet.</p>";
+          return;
+        }
+        savedPlans.innerHTML = plans.map((plan) => '<article class="tracker-entry"><div><strong>' + new Date(plan.createdAt).toLocaleDateString("en-GB") + '</strong><p>' + plan.priorityActions.slice(0, 2).join(" ") + '</p></div><button class="button secondary" type="button" data-delete-plan="' + plan.id + '">Delete</button></article>').join("");
+      }
+
+      function savePlan() {
+        if (!currentPlan) return;
+        const plans = readSaved().filter((plan) => plan.id !== currentPlan.id);
+        plans.unshift(currentPlan);
+        writeSaved(plans.slice(0, 12));
+        renderSavedPlans();
+        const status = document.querySelector("#plan-status");
+        if (status) status.textContent = "Plan saved locally in this browser.";
+      }
+
+      function exportPlan() {
+        if (!currentPlan) return;
+        const blob = new Blob([planText(currentPlan)], { type: "text/plain" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "credit-roadmap-improvement-plan.txt";
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+      }
+
+      function applyRoadmapDraft() {
+        try {
+          const draft = JSON.parse(localStorage.getItem(transferKey));
+          if (!draft || !draft.answers) return;
+          const answers = draft.answers;
+          document.querySelector("#plan-ccj").value = answers.ccjStatus || "none";
+          document.querySelector("#plan-defaults").value = answers.defaults || "0";
+          document.querySelector("#plan-missed").value = answers.missedPayments || "none";
+          document.querySelector("#plan-electoral").value = answers.electoralRoll || "yes";
+          document.querySelector("#plan-utilisation").value = answers.utilisation || "under25";
+          document.querySelector("#goal-mortgage").checked = answers.goal === "mortgage";
+          document.querySelector("#goal-car").checked = answers.goal === "car";
+          document.querySelector("#goal-card").checked = answers.goal === "card";
+          document.querySelector("#goal-phone").checked = answers.goal === "phone";
+          prefillNote.textContent = "Prefilled from your latest roadmap result. You can adjust any input before generating the plan.";
+          renderPlan(buildPlan(collectInputs()));
+        } catch (error) {
+          return;
+        }
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        renderPlan(buildPlan(collectInputs()));
+      });
+
+      form.addEventListener("reset", function () {
+        currentPlan = null;
+        setTimeout(function () {
+          results.innerHTML = "<h2>Your plan will appear here</h2><p>Generate a plan to see priority actions, quick wins, timelines, warnings and opportunities.</p>";
+        }, 0);
+      });
+
+      results.addEventListener("click", function (event) {
+        if (event.target && event.target.id === "save-plan") savePlan();
+        if (event.target && event.target.id === "export-plan") exportPlan();
+      });
+
+      savedPlans.addEventListener("click", function (event) {
+        const id = event.target && event.target.getAttribute("data-delete-plan");
+        if (!id) return;
+        writeSaved(readSaved().filter((plan) => plan.id !== id));
+        renderSavedPlans();
+      });
+
+      renderSavedPlans();
+      applyRoadmapDraft();
+    }());
+  </script>
+</body>
+</html>
