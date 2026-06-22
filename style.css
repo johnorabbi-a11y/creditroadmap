@@ -992,3 +992,51 @@ a:focus {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* AUTHORITY HUB LAYER */
+.hub-link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+}
+
+.hub-link-card {
+  display: block;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.hub-link-card strong,
+.hub-link-card span {
+  display: block;
+}
+
+.hub-link-card span {
+  margin-top: 6px;
+  color: var(--muted);
+}
+
+.hub-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hub-table th,
+.hub-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.hub-table th {
+  background: var(--soft-blue);
+}

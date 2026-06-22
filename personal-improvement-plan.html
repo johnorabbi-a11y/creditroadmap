@@ -366,7 +366,19 @@
           savedPlans.innerHTML = "<p>No saved plans yet.</p>";
           return;
         }
-        savedPlans.innerHTML = plans.map((plan) => '<article class="tracker-entry"><div><strong>' + new Date(plan.createdAt).toLocaleDateString("en-GB") + '</strong><p>' + plan.priorityActions.slice(0, 2).join(" ") + '</p></div><button class="button secondary" type="button" data-delete-plan="' + plan.id + '">Delete</button></article>').join("");
+        savedPlans.innerHTML = plans.map((plan) => '<article class="tracker-entry"><div><strong>' + new Date(plan.createdAt).toLocaleDateString("en-GB") + '</strong><p>' + plan.priorityActions.slice(0, 2).join(" ") + '</p></div><button class="button secondary" type="button" data-delete-plan="' + plan.id + '">Delete</button>
+      <!-- HUB_BACKLINK_mortgage-credit-help.html -->
+      <section>
+        <h2>Related help centre</h2>
+        <p>For a broader route through this topic, use the <a href="mortgage-credit-help.html">Mortgage Credit Help hub</a>. It links this guide with related credit-file, application and readiness pages.</p>
+      </section>
+
+      <!-- HUB_BACKLINK_defaults-and-credit-problems.html -->
+      <section>
+        <h2>Related help centre</h2>
+        <p>For a broader route through this topic, use the <a href="defaults-and-credit-problems.html">Defaults & Credit Problems hub</a>. It links this guide with related credit-file, application and readiness pages.</p>
+      </section>
+</article>').join("");
       }
 
       function savePlan() {
