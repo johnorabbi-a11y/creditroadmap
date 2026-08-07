@@ -525,6 +525,36 @@
       });
     }
 
+
+    /* SIGNAL_EXPANSION_READING */
+    if (data.goal === "phone") {
+      addUnique(reading, { href: "phone-contract-credit-check-explained.html", title: "Phone contract credit checks", text: "Understand searches, handset risk and address matching before applying." });
+      addUnique(reading, { href: "phone-contract-with-bad-credit-and-no-credit-history.html", title: "Phone contract with bad credit or no history", text: "Review thin-file and adverse-credit preparation routes." });
+      if (data.ccjStatus !== "none" || data.ccjAge !== "none") addUnique(reading, { href: "how-long-after-a-ccj-can-i-get-a-phone-contract.html", title: "Phone contract timing after a CCJ", text: "Check how CCJ age and satisfaction status may matter." });
+    }
+    if (data.utilisation === "50to75" || data.utilisation === "75plus") {
+      addUnique(reading, { href: "how-to-lower-credit-utilisation.html", title: "How to lower credit utilisation", text: "Work through practical ways to reduce visible balance pressure." });
+      addUnique(reading, { href: "credit-utilisation-per-card-vs-overall.html", title: "Per-card versus overall utilisation", text: "Check whether one card is creating concentrated pressure." });
+    }
+    if (data.electoralRoll === "no" || data.electoralRoll === "unsure") {
+      addUnique(reading, { href: "how-long-does-electoral-roll-take-to-update-credit-file.html", title: "Electoral roll update timing", text: "Understand why credit files may not update immediately." });
+      addUnique(reading, { href: "registered-to-vote-but-not-showing-on-credit-report.html", title: "Registered to vote but not showing", text: "Check matching and reporting issues." });
+    }
+    if (data.ccjStatus !== "none" || data.ccjAge !== "none") {
+      addUnique(reading, { href: "how-to-check-if-you-have-a-ccj.html", title: "How to check if you have a CCJ", text: "Review credit reports and public-record routes carefully." });
+      addUnique(reading, { href: "how-to-check-if-a-ccj-is-satisfied.html", title: "Check whether a CCJ is satisfied", text: "Understand satisfaction status and evidence of payment." });
+    }
+    if (data.goal === "mortgage") {
+      addUnique(reading, { href: "how-far-back-do-mortgage-lenders-look-at-bank-statements.html", title: "Mortgage bank statement lookback", text: "Understand affordability and recent statement checks." });
+      if (data.defaults !== "0") addUnique(reading, { href: "how-far-back-do-mortgage-lenders-look-at-defaults.html", title: "Mortgage lenders and defaults", text: "Review default timing, settlement and recent conduct." });
+      if (data.ccjStatus !== "none" || data.ccjAge !== "none") addUnique(reading, { href: "how-far-back-do-mortgage-lenders-look-at-ccjs.html", title: "Mortgage lenders and CCJs", text: "Review CCJ timing, status and preparation." });
+    }
+    if (data.goal === "car") {
+      addUnique(reading, { href: "car-finance-with-poor-credit-history.html", title: "Car finance with poor credit history", text: "Review broad adverse-credit car finance readiness." });
+      if ((data.ccjStatus !== "none" || data.ccjAge !== "none") && data.defaults !== "0") addUnique(reading, { href: "car-finance-with-ccj-and-defaults.html", title: "Car finance with CCJ and defaults", text: "Understand combined adverse-credit preparation." });
+      if (data.defaults !== "0") addUnique(reading, { href: "how-long-after-a-default-can-i-get-car-finance.html", title: "Car finance timing after a default", text: "Review default age, settlement and recent conduct." });
+    }
+
     return reading;
   }
 
