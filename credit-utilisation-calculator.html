@@ -63,7 +63,7 @@
       <a href="disclaimer.html">Disclaimer</a>
     </nav>
   </header>
-  <main>
+  <main data-calculator-tool="credit_utilisation">
     <section class="page-hero">
       <p class="eyebrow">Free credit tool</p>
       <h1>Credit Utilisation Calculator</h1>
@@ -76,7 +76,7 @@
     </section>
     <section id="calculator" class="section">
       <div class="tool-layout">
-        <form class="form-card calculator-form" id="utilisation-form">
+        <form class="form-card calculator-form" id="utilisation-form" data-track-tool="credit_utilisation">
           <h2>Calculate your utilisation</h2>
           <p class="microcopy">Enter the combined limit and balance across relevant credit cards or revolving accounts.</p>
           <label for="credit-limit">Total credit limit (£)</label>
@@ -149,6 +149,9 @@
         return new Intl.NumberFormat("en-GB", { style: "currency", currency: "GBP" }).format(value);
       }
       form.addEventListener("submit", function (event) {
+        if (window.CreditRoadmapAnalytics) {
+          window.CreditRoadmapAnalytics.track("calculator_used", { tool_name: "credit_utilisation" });
+        }
         event.preventDefault();
         const limit = Number(document.querySelector("#credit-limit").value);
         const balance = Number(document.querySelector("#credit-balance").value);
@@ -167,5 +170,6 @@
       });
     })();
   </script>
+  <script src="analytics.js" defer></script>
 </body>
 </html>

@@ -63,7 +63,7 @@
       <a href="disclaimer.html">Disclaimer</a>
     </nav>
   </header>
-  <main>
+  <main data-calculator-tool="affordability">
     <section class="page-hero">
       <p class="eyebrow">Budget pressure tool</p>
       <h1>Affordability Checker</h1>
@@ -76,7 +76,7 @@
     </section>
     <section id="tool" class="section">
       <div class="tool-layout">
-        <form class="form-card calculator-form" id="affordability-form">
+        <form class="form-card calculator-form" id="affordability-form" data-track-tool="affordability">
           <h2>Check affordability pressure</h2>
           <label for="aff-salary">Annual salary (£)</label>
           <input id="aff-salary" type="number" min="0" step="100" required>
@@ -100,7 +100,7 @@
       <div class="section-heading">
         <p class="eyebrow">Take-home pay</p>
         <h2>Check full take-home pay</h2>
-        <p>Gross salary does not show tax, National Insurance, pension contributions or student loan deductions. For a fuller income view, use <a href="https://aftertaxtool.com/salary-after-tax-uk.html">AfterTaxTool's UK salary calculator</a>.</p>
+        <p>Gross salary does not show tax, National Insurance, pension contributions or student loan deductions. For a fuller income view, use <a href="https://aftertaxtool.com/salary-after-tax-uk.html" data-track-context="related_tool_box">AfterTaxTool's UK salary calculator</a>.</p>
       </div>
     </section>
     <section class="section"><div class="content-panel"><h2>FAQ</h2><h3>Does this affordability checker calculate how much I can borrow?</h3><p>No. It does not calculate borrowing limits. It only gives an educational view of monthly commitment pressure.</p><h3>What does the affordability profile mean?</h3><p>Comfortable, Moderate and Stretched are broad indicators based on commitments compared with estimated gross monthly income.</p><h3>Should I use take-home pay as well?</h3><p>Yes. Gross salary is only a rough input, so checking take-home pay can give a clearer view of monthly budget pressure.</p><h3>Is this personalised advice?</h3><p>No. It is general UK credit education only and does not replace qualified financial or debt advice.</p></div></section>
@@ -111,7 +111,7 @@
     <h2 id="aftertaxtool-related-tool">Related tool: AfterTaxTool</h2>
     <p>Before applying for credit, it may help to understand your monthly take-home pay after tax, National Insurance, pension contributions and student loan deductions.</p>
   </div>
-  <a class="button primary" href="https://aftertaxtool.com/salary-after-tax-uk.html">Calculate take-home pay</a>
+  <a class="button primary" href="https://aftertaxtool.com/salary-after-tax-uk.html" data-track-context="related_tool_box">Calculate take-home pay</a>
 </section>
 <!-- /AFTERTAXTOOL_RELATED_TOOL -->
 </main>
@@ -133,6 +133,9 @@
       const results = document.querySelector("#affordability-results");
       const gbp = new Intl.NumberFormat("en-GB", { style: "currency", currency: "GBP", maximumFractionDigits: 0 });
       form.addEventListener("submit", function (event) {
+        if (window.CreditRoadmapAnalytics) {
+          window.CreditRoadmapAnalytics.track("calculator_used", { tool_name: "affordability" });
+        }
         event.preventDefault();
         const salary = Number(document.querySelector("#aff-salary").value || 0);
         const debts = Number(document.querySelector("#aff-debts").value || 0);
@@ -152,5 +155,6 @@
       });
     })();
   </script>
+  <script src="analytics.js" defer></script>
 </body>
 </html>

@@ -64,7 +64,7 @@
     </nav>
   </header>
 
-  <main>
+  <main data-calculator-tool="personal_improvement_plan">
     <section class="page-hero">
       <p class="eyebrow">Free planning tool</p>
       <h1>Personal Improvement Plan</h1>
@@ -340,8 +340,17 @@
         ].join("\n");
       }
 
+      function trackAnalytics(eventName) {
+        if (window.CreditRoadmapAnalytics) {
+          window.CreditRoadmapAnalytics.track(eventName, {
+            tool_name: "personal_improvement_plan"
+          });
+        }
+      }
+
       function renderPlan(plan) {
         currentPlan = plan;
+        trackAnalytics("improvement_plan_generated");
         results.innerHTML = '<h2>Your personal improvement plan</h2>' +
           '<div class="plan-actions"><button class="button primary" type="button" id="save-plan">Save Plan</button><button class="button secondary" type="button" id="export-plan">Export Plan</button></div>' +
           '<div class="plan-grid">' +
@@ -366,33 +375,7 @@
           savedPlans.innerHTML = "<p>No saved plans yet.</p>";
           return;
         }
-        savedPlans.innerHTML = plans.map((plan) => '<article class="tracker-entry"><div><strong>' + new Date(plan.createdAt).toLocaleDateString("en-GB") + '</strong><p>' + plan.priorityActions.slice(0, 2).join(" ") + '</p></div><button class="button secondary" type="button" data-delete-plan="' + plan.id + '">Delete</button>
-      <!-- HUB_BACKLINK_mortgage-credit-help.html -->
-      <section>
-        <h2>Related help centre</h2>
-        <p>For a broader route through this topic, use the <a href="mortgage-credit-help.html">Mortgage Credit Help hub</a>. It links this guide with related credit-file, application and readiness pages.</p>
-      </section>
-
-      <!-- HUB_BACKLINK_defaults-and-credit-problems.html -->
-      <section>
-        <h2>Related help centre</h2>
-        <p>For a broader route through this topic, use the <a href="defaults-and-credit-problems.html">Defaults & Credit Problems hub</a>. It links this guide with related credit-file, application and readiness pages.</p>
-      </section>
-
-      <!-- SIGNAL_EXPANSION_RELATED_ELECTORAL_ROLL_GUIDES -->
-      <section>
-        <h2>Related electoral roll guides</h2>
-        <p>These specific guides answer narrower Search Console-led questions and connect back to the main help centre.</p>
-        <div class="hub-link-grid">
-          <a class="hub-link-card" href="how-long-does-electoral-roll-take-to-update-credit-file.html"><strong>How long does electoral roll take to update your credit file?</strong><span>Read the specific UK guide.</span></a>
-          <a class="hub-link-card" href="how-much-does-electoral-roll-affect-credit-score.html"><strong>How much does electoral roll affect credit score?</strong><span>Read the specific UK guide.</span></a>
-          <a class="hub-link-card" href="does-electoral-roll-improve-credit-score.html"><strong>Does electoral roll improve credit score?</strong><span>Read the specific UK guide.</span></a>
-          <a class="hub-link-card" href="not-on-electoral-roll-credit-score.html"><strong>Not on electoral roll and credit score</strong><span>Read the specific UK guide.</span></a>
-          <a class="hub-link-card" href="electoral-roll-wrong-address-credit-report.html"><strong>Electoral roll wrong address on your credit report</strong><span>Read the specific UK guide.</span></a>
-          <a class="hub-link-card" href="registered-to-vote-but-not-showing-on-credit-report.html"><strong>Registered to vote but not showing on your credit report</strong><span>Read the specific UK guide.</span></a>
-        </div>
-      </section>
-      </article>').join("");
+        savedPlans.innerHTML = plans.map((plan) => '<article class="tracker-entry"><div><strong>' + new Date(plan.createdAt).toLocaleDateString("en-GB") + '</strong><p>' + plan.priorityActions.slice(0, 2).join(" ") + '</p></div><button class="button secondary" type="button" data-delete-plan="' + plan.id + '">Delete</button></article>').join("");
       }
 
       function savePlan() {
@@ -402,6 +385,7 @@
         writeSaved(plans.slice(0, 12));
         renderSavedPlans();
         const status = document.querySelector("#plan-status");
+        trackAnalytics("improvement_plan_saved");
         if (status) status.textContent = "Plan saved locally in this browser.";
       }
 
@@ -415,6 +399,7 @@
         document.body.appendChild(link);
         link.click();
         link.remove();
+        trackAnalytics("improvement_plan_exported");
         URL.revokeObjectURL(url);
       }
 
@@ -467,5 +452,6 @@
       applyRoadmapDraft();
     }());
   </script>
+  <script src="analytics.js" defer></script>
 </body>
 </html>

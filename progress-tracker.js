@@ -260,6 +260,11 @@
     link.href = url;
     link.download = "credit-roadmap-progress-report.txt";
     link.click();
+    if (window.CreditRoadmapAnalytics) {
+      window.CreditRoadmapAnalytics.track("improvement_plan_exported", {
+        source_page: "progress-tracker.html"
+      });
+    }
     URL.revokeObjectURL(url);
   }
 
@@ -271,6 +276,12 @@
     const snapshots = readSnapshots();
     snapshots.push(snapshot);
     writeSnapshots(snapshots);
+    if (window.CreditRoadmapAnalytics) {
+      window.CreditRoadmapAnalytics.track("progress_snapshot_saved", {
+        goal: snapshot.goal,
+        risk_band: snapshot.riskBand
+      });
+    }
     form.reset();
     form.elements.date.value = new Date().toISOString().slice(0, 10);
     if (clearStatus) {

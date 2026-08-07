@@ -750,7 +750,18 @@
     `).join("")}</div>`;
   }
 
+  function trackAnalytics(eventName, params) {
+    if (window.CreditRoadmapAnalytics) {
+      window.CreditRoadmapAnalytics.track(eventName, params || {});
+    }
+  }
+
   function renderRoadmap(roadmap) {
+    trackAnalytics("roadmap_completed", {
+      goal: roadmap.answers.goal,
+      risk_band: roadmap.band.label
+    });
+
     results.innerHTML = `
       <div class="result-report">
         <div class="result-header ${roadmap.band.className}">
@@ -829,6 +840,10 @@
     const saveStatus = document.querySelector("#save-roadmap-status");
     if (planButton) {
       planButton.addEventListener("click", () => {
+        trackAnalytics("improvement_plan_generated", {
+          goal: roadmap.answers.goal,
+          risk_band: roadmap.band.label
+        });
         localStorage.setItem("creditRoadmapPlanDraft", JSON.stringify({
           savedAt: new Date().toISOString(),
           score: roadmap.score,
@@ -877,6 +892,10 @@
           creditScoreViewLabel: getLabel("creditScoreView", answers.creditScoreView || "stable"),
           goal: answers.goal,
           goalLabel: getLabel("goal", answers.goal)
+        });
+        trackAnalytics("progress_snapshot_saved", {
+          goal: answers.goal,
+          risk_band: roadmap.band.label
         });
         saveButton.disabled = true;
         saveButton.textContent = "Result saved";

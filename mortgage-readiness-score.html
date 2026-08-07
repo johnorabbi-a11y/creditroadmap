@@ -63,7 +63,7 @@
       <a href="disclaimer.html">Disclaimer</a>
     </nav>
   </header>
-  <main>
+  <main data-calculator-tool="mortgage_readiness">
     <section class="page-hero">
       <p class="eyebrow">Mortgage preparation tool</p>
       <h1>Mortgage Readiness Score</h1>
@@ -76,7 +76,7 @@
     </section>
     <section id="tool" class="section">
       <div class="tool-layout">
-        <form class="form-card calculator-form" id="mortgage-score-form">
+        <form class="form-card calculator-form" id="mortgage-score-form" data-track-tool="mortgage_readiness">
           <h2>Check your mortgage readiness</h2>
           <label for="mrs-ccj">CCJ status</label>
           <select id="mrs-ccj" name="mrs-ccj">
@@ -151,6 +151,9 @@
       function add(list, item) { if (!list.includes(item)) list.push(item); }
       function list(items) { return "<ul>" + items.map((item) => "<li>" + item + "</li>").join("") + "</ul>"; }
       form.addEventListener("submit", function (event) {
+        if (window.CreditRoadmapAnalytics) {
+          window.CreditRoadmapAnalytics.track("calculator_used", { tool_name: "mortgage_readiness" });
+        }
         event.preventDefault();
         const ccj = document.querySelector("#mrs-ccj").value;
         const defaults = document.querySelector("#mrs-defaults").value;
@@ -174,5 +177,6 @@
       });
     })();
   </script>
+  <script src="analytics.js" defer></script>
 </body>
 </html>
