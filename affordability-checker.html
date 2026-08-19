@@ -78,13 +78,13 @@
       <div class="tool-layout">
         <form class="form-card calculator-form" id="affordability-form" data-track-tool="affordability">
           <h2>Check affordability pressure</h2>
-          <label for="aff-salary">Annual salary (£)</label>
+          <label for="aff-salary">Annual salary (??)</label>
           <input id="aff-salary" type="number" min="0" step="100" required>
-          <label for="aff-debts">Monthly debt payments (£)</label>
+          <label for="aff-debts">Monthly debt payments (??)</label>
           <input id="aff-debts" type="number" min="0" step="1" required>
-          <label for="aff-housing">Housing costs (£)</label>
+          <label for="aff-housing">Housing costs (??)</label>
           <input id="aff-housing" type="number" min="0" step="1" required>
-          <label for="aff-other">Other commitments (£)</label>
+          <label for="aff-other">Other commitments (??)</label>
           <input id="aff-other" type="number" min="0" step="1" required>
           <div class="form-actions">
             <button class="button primary" type="submit">Check profile</button>
@@ -114,6 +114,14 @@
   <a class="button primary" href="https://aftertaxtool.com/salary-after-tax-uk.html" data-track-context="related_tool_box">Calculate take-home pay</a>
 </section>
 <!-- /AFTERTAXTOOL_RELATED_TOOL -->
+<section class="section related-tool-box" aria-labelledby="worthmytime-related-tool">
+  <div class="container">
+    <p class="eyebrow">Related tool</p>
+    <h2 id="worthmytime-related-tool">Related tool: WorthMyTime</h2>
+    <p>If income looks affordable on paper, WorthMyTime can help you check whether the job still works once hours, commuting and work-related costs are included.</p>
+    <a class="button secondary" href="https://worthmytime.co.uk/tools/true-hourly-rate/" data-track-context="related_tool_box">Check your true hourly rate</a>
+  </div>
+</section>
 </main>
   <footer class="site-footer">
     <div>
@@ -142,7 +150,7 @@
         const housing = Number(document.querySelector("#aff-housing").value || 0);
         const other = Number(document.querySelector("#aff-other").value || 0);
         if (salary <= 0) {
-          results.innerHTML = "<h2>Check salary</h2><p>Please enter an annual salary above £0.</p>";
+          results.innerHTML = "<h2>Check salary</h2><p>Please enter an annual salary above ??0.</p>";
           return;
         }
         const monthlyGross = salary / 12;
@@ -158,3 +166,4 @@
   <script src="analytics.js" defer></script>
 </body>
 </html>
+
