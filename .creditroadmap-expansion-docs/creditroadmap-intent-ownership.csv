@@ -1,0 +1,8 @@
+"intent_family","existing_owner","action","new_owner"
+"CCJ core","ccj-help.html / ccj-guide.html","Preserve; add detail routes","No replacement"
+"Defaults core","defaults-and-credit-problems.html / defaults-guide.html","Preserve; add default-status routes","No replacement"
+"Credit reports and CRA basics","Partial via individual guides","Create hub and foundations","credit-report-help.html"
+"Missed and late payments","Partial via mortgage/phone pages","Create hub and practical guides","missed-payments-credit-help.html"
+"Renting with adverse credit","Weak/missing","Create controlled cluster","renting-credit-help.html"
+"Personal loans with adverse credit","Partial CCJ loan page","Create controlled cluster","personal-loans-and-credit.html"
+"Application timing and recovery","Partial timeline estimator","Create timing hub and tools","credit-recovery-timelines.html"

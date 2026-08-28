@@ -1,0 +1,1266 @@
+{
+  "htmlCount": 131,
+  "sitemapCount": 131,
+  "queryCount": 799,
+  "queryClicks": 0,
+  "queryImpressions": 4228,
+  "pagesInGsc": 89,
+  "pageImpressions": 5985,
+  "families": {
+    "Utilisation and limits": {
+      "queries": 11,
+      "impressions": 102,
+      "top": [
+        {
+          "query": "credit utilisation uk",
+          "clicks": 0,
+          "impressions": 81,
+          "position": 80.38
+        },
+        {
+          "query": "credit utilisation",
+          "clicks": 0,
+          "impressions": 5,
+          "position": 78.2
+        },
+        {
+          "query": "credit utilization calculator",
+          "clicks": 0,
+          "impressions": 3,
+          "position": 36
+        },
+        {
+          "query": "best credit utilization ratio uk",
+          "clicks": 0,
+          "impressions": 3,
+          "position": 73
+        },
+        {
+          "query": "credit utilisation ratio",
+          "clicks": 0,
+          "impressions": 3,
+          "position": 81
+        },
+        {
+          "query": "credit utilization",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 96
+        },
+        {
+          "query": "how much of my credit limit should i use uk",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 62
+        },
+        {
+          "query": "low credit limit",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 68
+        },
+        {
+          "query": "credit utilisation rate uk",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 78
+        },
+        {
+          "query": "how much of credit limit to use",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 78
+        },
+        {
+          "query": "how much of your credit limit should you use",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 86
+        }
+      ],
+      "avgPosition": 78.78
+    },
+    "CCJs": {
+      "queries": 237,
+      "impressions": 1076,
+      "top": [
+        {
+          "query": "ccj car finance",
+          "clicks": 0,
+          "impressions": 78,
+          "position": 94.38
+        },
+        {
+          "query": "ccj credit card",
+          "clicks": 0,
+          "impressions": 57,
+          "position": 40.26
+        },
+        {
+          "query": "ccj car insurance",
+          "clicks": 0,
+          "impressions": 35,
+          "position": 48.2
+        },
+        {
+          "query": "car finance with ccj",
+          "clicks": 0,
+          "impressions": 28,
+          "position": 92.89
+        },
+        {
+          "query": "car finance with a ccj",
+          "clicks": 0,
+          "impressions": 25,
+          "position": 95.56
+        },
+        {
+          "query": "car finance with satisfied ccj",
+          "clicks": 0,
+          "impressions": 22,
+          "position": 67.18
+        },
+        {
+          "query": "how do i check if i have a ccj",
+          "clicks": 0,
+          "impressions": 21,
+          "position": 72.19
+        },
+        {
+          "query": "how to check if i have a ccj",
+          "clicks": 0,
+          "impressions": 19,
+          "position": 70.53
+        },
+        {
+          "query": "how to find ccj details",
+          "clicks": 0,
+          "impressions": 18,
+          "position": 55.44
+        },
+        {
+          "query": "ccj car finance no guarantor",
+          "clicks": 0,
+          "impressions": 18,
+          "position": 94.72
+        },
+        {
+          "query": "car finance ccj",
+          "clicks": 0,
+          "impressions": 18,
+          "position": 95
+        },
+        {
+          "query": "does ccj affect car insurance",
+          "clicks": 0,
+          "impressions": 16,
+          "position": 30.31
+        }
+      ],
+      "avgPosition": 70.88
+    },
+    "Credit cards": {
+      "queries": 285,
+      "impressions": 1979,
+      "top": [
+        {
+          "query": "credit card utilisation uk",
+          "clicks": 0,
+          "impressions": 74,
+          "position": 79.65
+        },
+        {
+          "query": "when to close a credit card",
+          "clicks": 0,
+          "impressions": 56,
+          "position": 53.89
+        },
+        {
+          "query": "unused credit card",
+          "clicks": 0,
+          "impressions": 52,
+          "position": 54.08
+        },
+        {
+          "query": "can you cancel a credit card",
+          "clicks": 0,
+          "impressions": 48,
+          "position": 75.29
+        },
+        {
+          "query": "how long is a credit card",
+          "clicks": 0,
+          "impressions": 47,
+          "position": 47.51
+        },
+        {
+          "query": "when to cancel a credit card",
+          "clicks": 0,
+          "impressions": 45,
+          "position": 62.98
+        },
+        {
+          "query": "cancel credit card",
+          "clicks": 0,
+          "impressions": 44,
+          "position": 67.59
+        },
+        {
+          "query": "when to cancel credit card",
+          "clicks": 0,
+          "impressions": 43,
+          "position": 56.58
+        },
+        {
+          "query": "applied for a credit card how long",
+          "clicks": 0,
+          "impressions": 39,
+          "position": 53.56
+        },
+        {
+          "query": "credit card utilisation",
+          "clicks": 0,
+          "impressions": 38,
+          "position": 85.32
+        },
+        {
+          "query": "when to close credit card",
+          "clicks": 0,
+          "impressions": 37,
+          "position": 54.76
+        },
+        {
+          "query": "what to do before applying for a credit card",
+          "clicks": 0,
+          "impressions": 37,
+          "position": 78
+        }
+      ],
+      "avgPosition": 60.26
+    },
+    "Mortgage readiness": {
+      "queries": 40,
+      "impressions": 243,
+      "top": [
+        {
+          "query": "how far back do mortgage lenders look at credit history",
+          "clicks": 0,
+          "impressions": 70,
+          "position": 47.39
+        },
+        {
+          "query": "how far back do mortgage lenders look at bank statements",
+          "clicks": 0,
+          "impressions": 45,
+          "position": 45.22
+        },
+        {
+          "query": "mortgage after bankruptcy",
+          "clicks": 0,
+          "impressions": 20,
+          "position": 86
+        },
+        {
+          "query": "how long do banks keep mortgage records",
+          "clicks": 0,
+          "impressions": 16,
+          "position": 47
+        },
+        {
+          "query": "how far back do mortgage lenders look",
+          "clicks": 0,
+          "impressions": 11,
+          "position": 25
+        },
+        {
+          "query": "mortgage after iva",
+          "clicks": 0,
+          "impressions": 8,
+          "position": 80.75
+        },
+        {
+          "query": "remortgage iva",
+          "clicks": 0,
+          "impressions": 6,
+          "position": 88.5
+        },
+        {
+          "query": "how many years credit history do mortgage lenders look at",
+          "clicks": 0,
+          "impressions": 5,
+          "position": 73.6
+        },
+        {
+          "query": "iva remortgage",
+          "clicks": 0,
+          "impressions": 5,
+          "position": 92.8
+        },
+        {
+          "query": "how far back to mortgage lenders look",
+          "clicks": 0,
+          "impressions": 4,
+          "position": 43.75
+        },
+        {
+          "query": "how long credit history for mortgage",
+          "clicks": 0,
+          "impressions": 4,
+          "position": 66.75
+        },
+        {
+          "query": "mortgages after bankruptcy",
+          "clicks": 0,
+          "impressions": 4,
+          "position": 83.25
+        }
+      ],
+      "avgPosition": 60.52
+    },
+    "Electoral roll and address": {
+      "queries": 14,
+      "impressions": 98,
+      "top": [
+        {
+          "query": "electoral roll credit score",
+          "clicks": 0,
+          "impressions": 46,
+          "position": 53.15
+        },
+        {
+          "query": "electoral roll and credit score",
+          "clicks": 0,
+          "impressions": 9,
+          "position": 53.56
+        },
+        {
+          "query": "electoral roll credit score points",
+          "clicks": 0,
+          "impressions": 8,
+          "position": 52.88
+        },
+        {
+          "query": "how much does electoral roll affect credit",
+          "clicks": 0,
+          "impressions": 7,
+          "position": 50.71
+        },
+        {
+          "query": "how much will my credit score go up electoral roll",
+          "clicks": 0,
+          "impressions": 6,
+          "position": 53.17
+        },
+        {
+          "query": "how long for electoral roll to update on credit file",
+          "clicks": 0,
+          "impressions": 5,
+          "position": 91.6
+        },
+        {
+          "query": "electoral register credit score",
+          "clicks": 0,
+          "impressions": 4,
+          "position": 60
+        },
+        {
+          "query": "electoral roll credit score uk",
+          "clicks": 0,
+          "impressions": 3,
+          "position": 49
+        },
+        {
+          "query": "does electoral roll affect credit score",
+          "clicks": 0,
+          "impressions": 3,
+          "position": 50.67
+        },
+        {
+          "query": "why does electoral roll affect credit",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 40.5
+        },
+        {
+          "query": "how does being on the electoral roll affect credit",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 52.5
+        },
+        {
+          "query": "electoral roll not showing on credit report",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 35
+        }
+      ],
+      "avgPosition": 54.62
+    },
+    "Defaults": {
+      "queries": 59,
+      "impressions": 359,
+      "top": [
+        {
+          "query": "car finance with defaults",
+          "clicks": 0,
+          "impressions": 40,
+          "position": 45.4
+        },
+        {
+          "query": "my mortgage is in default what now",
+          "clicks": 0,
+          "impressions": 31,
+          "position": 91.68
+        },
+        {
+          "query": "account defaults",
+          "clicks": 0,
+          "impressions": 29,
+          "position": 49.97
+        },
+        {
+          "query": "mortgage with default on credit file",
+          "clicks": 0,
+          "impressions": 24,
+          "position": 82.88
+        },
+        {
+          "query": "can you still get a mortgage with defaults",
+          "clicks": 0,
+          "impressions": 23,
+          "position": 96.7
+        },
+        {
+          "query": "how long after a default can i get a mortgage",
+          "clicks": 0,
+          "impressions": 22,
+          "position": 83.09
+        },
+        {
+          "query": "can you get a mortgage with a default",
+          "clicks": 0,
+          "impressions": 22,
+          "position": 98.64
+        },
+        {
+          "query": "car finance with ccjs and defaults",
+          "clicks": 0,
+          "impressions": 19,
+          "position": 58.47
+        },
+        {
+          "query": "mortgage with defaults on credit file",
+          "clicks": 0,
+          "impressions": 19,
+          "position": 93.68
+        },
+        {
+          "query": "can i get a mortgage with defaults",
+          "clicks": 0,
+          "impressions": 18,
+          "position": 98.72
+        },
+        {
+          "query": "what is a default credit card",
+          "clicks": 0,
+          "impressions": 13,
+          "position": 52.62
+        },
+        {
+          "query": "will i get a mortgage with defaults",
+          "clicks": 0,
+          "impressions": 13,
+          "position": 98.46
+        }
+      ],
+      "avgPosition": 74.81
+    },
+    "Mobile and utilities": {
+      "queries": 13,
+      "impressions": 56,
+      "top": [
+        {
+          "query": "refused phone contract",
+          "clicks": 0,
+          "impressions": 26,
+          "position": 52
+        },
+        {
+          "query": "declined phone contract",
+          "clicks": 0,
+          "impressions": 15,
+          "position": 40.2
+        },
+        {
+          "query": "good credit score but declined phone contract",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 38
+        },
+        {
+          "query": "credit check for cell phone contract",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 53.5
+        },
+        {
+          "query": "credit check for mobile phone contract",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 58
+        },
+        {
+          "query": "phone contract eligibility checker",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 92.5
+        },
+        {
+          "query": "iphone pay monthly bad credit",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 4
+        },
+        {
+          "query": "mobile phone contract bad credit",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 5
+        },
+        {
+          "query": "phone contract no credit check",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 6
+        },
+        {
+          "query": "failed credit check for mobile phone",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 49
+        },
+        {
+          "query": "phone contract credit score",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 61
+        },
+        {
+          "query": "mobile phone bad credit history",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 80
+        }
+      ],
+      "avgPosition": 48.66
+    },
+    "Other": {
+      "queries": 61,
+      "impressions": 132,
+      "top": [
+        {
+          "query": "debt relief",
+          "clicks": 0,
+          "impressions": 18,
+          "position": 64.56
+        },
+        {
+          "query": "check ccjs",
+          "clicks": 0,
+          "impressions": 10,
+          "position": 66.2
+        },
+        {
+          "query": "can i finance a car with poor credit?",
+          "clicks": 0,
+          "impressions": 5,
+          "position": 94
+        },
+        {
+          "query": "register of judgments",
+          "clicks": 0,
+          "impressions": 4,
+          "position": 78.75
+        },
+        {
+          "query": "ccjs register",
+          "clicks": 0,
+          "impressions": 4,
+          "position": 86.25
+        },
+        {
+          "query": "can i finance car with bad credit",
+          "clicks": 0,
+          "impressions": 4,
+          "position": 94.25
+        },
+        {
+          "query": "do ccjs affect car insurance",
+          "clicks": 0,
+          "impressions": 3,
+          "position": 34
+        },
+        {
+          "query": "check for ccjs",
+          "clicks": 0,
+          "impressions": 3,
+          "position": 68.67
+        },
+        {
+          "query": "how to check for ccjs",
+          "clicks": 0,
+          "impressions": 3,
+          "position": 70
+        },
+        {
+          "query": "have i got any ccjs",
+          "clicks": 0,
+          "impressions": 3,
+          "position": 71
+        },
+        {
+          "query": "how far back does a credit check go",
+          "clicks": 0,
+          "impressions": 3,
+          "position": 71.67
+        },
+        {
+          "query": "debt relief plan",
+          "clicks": 0,
+          "impressions": 3,
+          "position": 74.33
+        }
+      ],
+      "avgPosition": 71.6
+    },
+    "Car finance": {
+      "queries": 44,
+      "impressions": 131,
+      "top": [
+        {
+          "query": "credit check for car finance",
+          "clicks": 0,
+          "impressions": 9,
+          "position": 73.89
+        },
+        {
+          "query": "iva car finance",
+          "clicks": 0,
+          "impressions": 9,
+          "position": 97.22
+        },
+        {
+          "query": "how long can you get a car loan for",
+          "clicks": 0,
+          "impressions": 8,
+          "position": 74.38
+        },
+        {
+          "query": "credit checks for car finance",
+          "clicks": 0,
+          "impressions": 6,
+          "position": 73
+        },
+        {
+          "query": "does car finance improve credit score",
+          "clicks": 0,
+          "impressions": 6,
+          "position": 87
+        },
+        {
+          "query": "car finance with an iva",
+          "clicks": 0,
+          "impressions": 6,
+          "position": 91.5
+        },
+        {
+          "query": "what checks are done for car finance",
+          "clicks": 0,
+          "impressions": 5,
+          "position": 64.8
+        },
+        {
+          "query": "what checks are done for car finance uk",
+          "clicks": 0,
+          "impressions": 5,
+          "position": 66.4
+        },
+        {
+          "query": "how long does car finance take to pay out",
+          "clicks": 0,
+          "impressions": 5,
+          "position": 78.2
+        },
+        {
+          "query": "what do car finance companies check",
+          "clicks": 0,
+          "impressions": 5,
+          "position": 78.8
+        },
+        {
+          "query": "what credit checks do car finance do",
+          "clicks": 0,
+          "impressions": 5,
+          "position": 82.8
+        },
+        {
+          "query": "car finance with iva",
+          "clicks": 0,
+          "impressions": 5,
+          "position": 87.8
+        }
+      ],
+      "avgPosition": 80.58
+    },
+    "Debt solutions": {
+      "queries": 16,
+      "impressions": 27,
+      "top": [
+        {
+          "query": "credit after bankruptcy",
+          "clicks": 0,
+          "impressions": 5,
+          "position": 65.4
+        },
+        {
+          "query": "remortgaging with an iva",
+          "clicks": 0,
+          "impressions": 5,
+          "position": 83.8
+        },
+        {
+          "query": "rebuild credit after bankruptcy",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 65
+        },
+        {
+          "query": "can you get credit after bankruptcy",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 68.5
+        },
+        {
+          "query": "can i get a car on finance with an iva",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 91
+        },
+        {
+          "query": "can i get credit after bankruptcy",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 60
+        },
+        {
+          "query": "help after bankruptcy",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 60
+        },
+        {
+          "query": "how to rebuild credit after bankruptcy",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 63
+        },
+        {
+          "query": "obtaining credit after bankruptcy",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 63
+        },
+        {
+          "query": "how to obtain credit after bankruptcy",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 65
+        },
+        {
+          "query": "establishing credit after bankruptcy",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 66
+        },
+        {
+          "query": "how to rebuild my credit after bankruptcy",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 66
+        }
+      ],
+      "avgPosition": 72.89
+    },
+    "Credit reports and scores": {
+      "queries": 18,
+      "impressions": 24,
+      "top": [
+        {
+          "query": "how to rebuild credit score after bankruptcy",
+          "clicks": 0,
+          "impressions": 3,
+          "position": 68
+        },
+        {
+          "query": "does having a car on finance affect credit score",
+          "clicks": 0,
+          "impressions": 3,
+          "position": 80
+        },
+        {
+          "query": "debt relief order credit file",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 68
+        },
+        {
+          "query": "auto loan credit score",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 80.5
+        },
+        {
+          "query": "settled or satisfied on credit report",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 42
+        },
+        {
+          "query": "settled on credit report",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 43
+        },
+        {
+          "query": "does getting rejected affect credit score",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 50
+        },
+        {
+          "query": "improving your credit score after bankruptcy",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 63
+        },
+        {
+          "query": "how to raise credit score after bankruptcy",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 64
+        },
+        {
+          "query": "how to raise your credit score after bankruptcy",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 64
+        },
+        {
+          "query": "do declined payments affect credit score uk",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 65
+        },
+        {
+          "query": "how long does it take for a judgement to show on your credit report",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 70
+        }
+      ],
+      "avgPosition": 70.38
+    },
+    "Applications and searches": {
+      "queries": 1,
+      "impressions": 1,
+      "top": [
+        {
+          "query": "does applying for credit affect score",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 68
+        }
+      ],
+      "avgPosition": 68
+    }
+  },
+  "topPages": [
+    {
+      "page": "https://creditroadmap.co.uk/how-long-should-i-wait-between-credit-card-applications.html",
+      "file": "how-long-should-i-wait-between-credit-card-applications.html",
+      "clicks": 0,
+      "impressions": 604,
+      "position": 52.46,
+      "inbound": 5,
+      "exists": true,
+      "cluster": "Credit cards"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/should-i-close-old-credit-cards.html",
+      "file": "should-i-close-old-credit-cards.html",
+      "clicks": 0,
+      "impressions": 572,
+      "position": 63.15,
+      "inbound": 7,
+      "exists": true,
+      "cluster": "Credit cards"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/ccj-not-showing-on-credit-report.html",
+      "file": "ccj-not-showing-on-credit-report.html",
+      "clicks": 0,
+      "impressions": 320,
+      "position": 63.48,
+      "inbound": 3,
+      "exists": true,
+      "cluster": "CCJs"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/car-finance-with-ccj.html",
+      "file": "car-finance-with-ccj.html",
+      "clicks": 0,
+      "impressions": 312,
+      "position": 86.38,
+      "inbound": 9,
+      "exists": true,
+      "cluster": "CCJs"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/how-to-find-details-of-a-ccj.html",
+      "file": "how-to-find-details-of-a-ccj.html",
+      "clicks": 0,
+      "impressions": 262,
+      "position": 78.2,
+      "inbound": 7,
+      "exists": true,
+      "cluster": "CCJs"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/how-to-check-if-you-have-a-ccj.html",
+      "file": "how-to-check-if-you-have-a-ccj.html",
+      "clicks": 0,
+      "impressions": 254,
+      "position": 73.94,
+      "inbound": 4,
+      "exists": true,
+      "cluster": "CCJs"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/how-to-check-if-a-ccj-is-satisfied.html",
+      "file": "how-to-check-if-a-ccj-is-satisfied.html",
+      "clicks": 0,
+      "impressions": 229,
+      "position": 84.14,
+      "inbound": 3,
+      "exists": true,
+      "cluster": "CCJs"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/mortgage-with-defaults.html",
+      "file": "mortgage-with-defaults.html",
+      "clicks": 0,
+      "impressions": 223,
+      "position": 89.43,
+      "inbound": 7,
+      "exists": true,
+      "cluster": "Defaults"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/phone-contract-with-ccj.html",
+      "file": "phone-contract-with-ccj.html",
+      "clicks": 2,
+      "impressions": 218,
+      "position": 9.22,
+      "inbound": 9,
+      "exists": true,
+      "cluster": "CCJs"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/does-applying-for-a-credit-card-affect-credit-score.html",
+      "file": "does-applying-for-a-credit-card-affect-credit-score.html",
+      "clicks": 0,
+      "impressions": 209,
+      "position": 64.55,
+      "inbound": 1,
+      "exists": true,
+      "cluster": "Credit cards"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/what-to-do-with-an-unused-credit-card.html",
+      "file": "what-to-do-with-an-unused-credit-card.html",
+      "clicks": 0,
+      "impressions": 196,
+      "position": 54.37,
+      "inbound": 4,
+      "exists": true,
+      "cluster": "Credit cards"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/how-far-back-do-mortgage-lenders-look-at-credit-history.html",
+      "file": "how-far-back-do-mortgage-lenders-look-at-credit-history.html",
+      "clicks": 0,
+      "impressions": 158,
+      "position": 48.62,
+      "inbound": 7,
+      "exists": true,
+      "cluster": "Mortgage readiness"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/can-i-get-a-credit-card-with-defaults.html",
+      "file": "can-i-get-a-credit-card-with-defaults.html",
+      "clicks": 0,
+      "impressions": 138,
+      "position": 18.88,
+      "inbound": 5,
+      "exists": true,
+      "cluster": "Defaults"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/credit-utilisation-calculator.html",
+      "file": "credit-utilisation-calculator.html",
+      "clicks": 0,
+      "impressions": 125,
+      "position": 71.02,
+      "inbound": 11,
+      "exists": true,
+      "cluster": "Utilisation and limits"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/how-long-should-you-keep-a-credit-card-open.html",
+      "file": "how-long-should-you-keep-a-credit-card-open.html",
+      "clicks": 0,
+      "impressions": 117,
+      "position": 53.17,
+      "inbound": 4,
+      "exists": true,
+      "cluster": "Credit cards"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/can-i-get-a-credit-card-after-bankruptcy.html",
+      "file": "can-i-get-a-credit-card-after-bankruptcy.html",
+      "clicks": 1,
+      "impressions": 114,
+      "position": 41.21,
+      "inbound": 4,
+      "exists": true,
+      "cluster": "Credit cards"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/should-i-cancel-a-credit-card-i-dont-use.html",
+      "file": "should-i-cancel-a-credit-card-i-dont-use.html",
+      "clicks": 0,
+      "impressions": 100,
+      "position": 58.22,
+      "inbound": 4,
+      "exists": true,
+      "cluster": "Credit cards"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/phone-contract-with-defaults.html",
+      "file": "phone-contract-with-defaults.html",
+      "clicks": 1,
+      "impressions": 93,
+      "position": 7.65,
+      "inbound": 11,
+      "exists": true,
+      "cluster": "Defaults"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/can-i-get-a-credit-card-with-a-ccj.html",
+      "file": "can-i-get-a-credit-card-with-a-ccj.html",
+      "clicks": 0,
+      "impressions": 89,
+      "position": 45.27,
+      "inbound": 3,
+      "exists": true,
+      "cluster": "CCJs"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/credit-card-utilisation-explained.html",
+      "file": "credit-card-utilisation-explained.html",
+      "clicks": 0,
+      "impressions": 89,
+      "position": 78.33,
+      "inbound": 15,
+      "exists": true,
+      "cluster": "Credit cards"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/car-finance-with-defaults.html",
+      "file": "car-finance-with-defaults.html",
+      "clicks": 0,
+      "impressions": 86,
+      "position": 40.8,
+      "inbound": 12,
+      "exists": true,
+      "cluster": "Defaults"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/can-i-get-a-mortgage-with-a-ccj.html",
+      "file": "can-i-get-a-mortgage-with-a-ccj.html",
+      "clicks": 0,
+      "impressions": 78,
+      "position": 92.55,
+      "inbound": 3,
+      "exists": true,
+      "cluster": "CCJs"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/credit-utilisation-guide.html",
+      "file": "credit-utilisation-guide.html",
+      "clicks": 0,
+      "impressions": 75,
+      "position": 78.73,
+      "inbound": 196,
+      "exists": true,
+      "cluster": "Utilisation and limits"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/electoral-roll-guide.html",
+      "file": "electoral-roll-guide.html",
+      "clicks": 0,
+      "impressions": 73,
+      "position": 53.51,
+      "inbound": 165,
+      "exists": true,
+      "cluster": "Electoral roll and address"
+    },
+    {
+      "page": "https://creditroadmap.co.uk/improve-credit-before-applying-for-a-credit-card.html",
+      "file": "improve-credit-before-applying-for-a-credit-card.html",
+      "clicks": 0,
+      "impressions": 71,
+      "position": 73.23,
+      "inbound": 1,
+      "exists": true,
+      "cluster": "Credit cards"
+    }
+  ],
+  "weakestIndexed": [
+    {
+      "file": "about.html",
+      "inbound": 1,
+      "cluster": "Other"
+    },
+    {
+      "file": "best-way-to-build-credit-with-a-phone-contract.html",
+      "inbound": 1,
+      "cluster": "Mobile and utilities"
+    },
+    {
+      "file": "can-i-get-a-credit-card-after-a-debt-management-plan.html",
+      "inbound": 1,
+      "cluster": "Credit cards"
+    },
+    {
+      "file": "can-i-get-a-phone-contract-with-a-paid-default.html",
+      "inbound": 1,
+      "cluster": "Defaults"
+    },
+    {
+      "file": "can-i-get-a-phone-contract-with-an-unpaid-ccj.html",
+      "inbound": 1,
+      "cluster": "CCJs"
+    },
+    {
+      "file": "can-i-get-a-phone-contract-with-satisfied-ccj.html",
+      "inbound": 1,
+      "cluster": "CCJs"
+    },
+    {
+      "file": "can-i-get-an-iphone-contract-with-bad-credit.html",
+      "inbound": 1,
+      "cluster": "Mobile and utilities"
+    },
+    {
+      "file": "can-i-get-car-finance-with-a-paid-default.html",
+      "inbound": 1,
+      "cluster": "Defaults"
+    },
+    {
+      "file": "car-finance-after-debt-management-plan.html",
+      "inbound": 1,
+      "cluster": "Car finance"
+    },
+    {
+      "file": "car-finance-after-iva.html",
+      "inbound": 1,
+      "cluster": "Car finance"
+    },
+    {
+      "file": "car-finance-with-satisfied-ccj.html",
+      "inbound": 1,
+      "cluster": "CCJs"
+    },
+    {
+      "file": "ccj-and-car-insurance.html",
+      "inbound": 1,
+      "cluster": "CCJs"
+    },
+    {
+      "file": "credit-utilisation-per-card-vs-overall.html",
+      "inbound": 1,
+      "cluster": "Credit cards"
+    },
+    {
+      "file": "does-a-ccj-show-on-a-dbs-check.html",
+      "inbound": 1,
+      "cluster": "CCJs"
+    },
+    {
+      "file": "does-applying-for-a-credit-card-affect-credit-score.html",
+      "inbound": 1,
+      "cluster": "Credit cards"
+    },
+    {
+      "file": "does-being-declined-for-a-phone-contract-hurt-credit-score.html",
+      "inbound": 1,
+      "cluster": "Mobile and utilities"
+    },
+    {
+      "file": "does-being-declined-for-car-finance-hurt-credit-score.html",
+      "inbound": 1,
+      "cluster": "Car finance"
+    },
+    {
+      "file": "does-car-finance-affect-credit-score.html",
+      "inbound": 1,
+      "cluster": "Car finance"
+    },
+    {
+      "file": "high-credit-limit-low-utilisation.html",
+      "inbound": 1,
+      "cluster": "Utilisation and limits"
+    },
+    {
+      "file": "improve-credit-before-applying-for-a-credit-card.html",
+      "inbound": 1,
+      "cluster": "Credit cards"
+    },
+    {
+      "file": "progress-tracker-guide.html",
+      "inbound": 1,
+      "cluster": "Other"
+    },
+    {
+      "file": "what-is-a-debt-relief-order.html",
+      "inbound": 1,
+      "cluster": "Other"
+    },
+    {
+      "file": "can-i-get-a-credit-card-after-an-iva.html",
+      "inbound": 2,
+      "cluster": "Credit cards"
+    },
+    {
+      "file": "car-finance-with-unpaid-defaults.html",
+      "inbound": 2,
+      "cluster": "Defaults"
+    },
+    {
+      "file": "credit-improvement-timeline-estimator.html",
+      "inbound": 2,
+      "cluster": "Other"
+    }
+  ]
+}
