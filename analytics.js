@@ -91,8 +91,8 @@
       return;
     }
 
-    if (target.matches("a[href*='aftertaxtool.com']")) {
-      track("cross_site_aftertaxtool_click", {
+    if (target.matches("a[href*='salarydecoded.com']")) {
+      track("cross_site_salarydecoded_click", {
         source_page: pageName(),
         link_context: linkContext(target)
       });

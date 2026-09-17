@@ -173,7 +173,7 @@
     }
 
     if (data.goal === "mortgage") {
-      addUnique(goalGuidance, 'Mortgage: lenders may look closely at deposit size, affordability, <a href="https://aftertaxtool.com/take-home-pay-uk.html">take-home pay</a>, CCJs, defaults, missed payments and the age of adverse markers.');
+      addUnique(goalGuidance, 'Mortgage: lenders may look closely at deposit size, affordability, <a href="https://salarydecoded.com/uk/monthly-take-home-pay/">take-home pay</a>, CCJs, defaults, missed payments and the age of adverse markers.');
       addUnique(goalGuidance, "Recent or unpaid adverse markers may significantly narrow options, so qualified mortgage advice could be useful before applying.");
       addUnique(twelveMonth, "For a mortgage goal, focus on deposit building, clean recent payment history, reducing unsecured balances and letting adverse markers age where possible.");
     }
